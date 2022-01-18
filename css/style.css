@@ -1,0 +1,11 @@
+.hero-banner {
+  background-image: url("../img/WEBSITE.jpg");
+  background-size: cover;
+}
+
+@media screen and (max-width: 760px) {
+  .hero-banner {
+    background-image: url("../img/WEBSITE-mobile.png");
+    background-size: cover;
+  }
+}
