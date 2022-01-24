@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Find the best leggings for your body type. "
+    />
+    <meta name="keywords" content="tiktok leggings" />
+    <meta name="author" content="AWLeggings" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>3 Leggings</title>
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+
+    <!--Core CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/app.css" />
+    <link rel="stylesheet" href="../assets/css/core.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .navbar-wrapper .account-dropdown .dropdown-trigger .button img {
+        display: block;
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        min-height: 30px;
+        border-radius: 27%;
+      }
+
+      .spacer {
+        margin-bottom: 80px;
+      }
+
+      .kit-btn {
+        width: 100%;
+      }
+
+      .grid-product {
+        padding: 30px;
+      }
+
+      .grid-products .grid-products-inner .grid-product .grid-product-info h4 {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: green;
+        font-weight: bold;
+      }
+
+      .grid-products .grid-products-inner .grid-product:hover .buttons .button {
+        background: red;
+        border-color: red;
+        color: #fff;
+        -webkit-box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
+          0 4px 23px 0px rgb(0 0 0 / 12%),
+          0 8px 10px -5px rgb(140 140 249 / 20%) !important;
+        box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
+          0 4px 23px 0px rgb(0 0 0 / 12%),
+          0 8px 10px -5px rgb(140 140 249 / 20%) !important;
+      }
+
+      .menu-ul li {
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .button.is-link {
+        background: #4a90e2 !important;
+        color: white;
+      }
+
+      .button.is-link:hover {
+        background: lightsalmon !important;
+        color: black;
+      }
+
+      .site-blue {
+        background: #4a90e2 !important;
+        color: white;
+        border: none;
+      }
+
+      .site-blue:hover {
+        background: #4a90e2 !important;
+        color: white;
+        border: none;
+      }
+
+      .popular-categories .box.is-category:hover {
+        background: transparent;
+        border: inherit;
+      }
+
+      .popular-categories .box.is-category:hover .left h3,
+      .popular-categories .box.is-category:hover .left p {
+        color: #444f60 !important;
+        -webkit-box-shadow: -1px 3px 15px 0 rgb(0 0 0 / 6%);
+        box-shadow: -1px 3px 15px 0 rgb(0 0 0 / 6%);
+      }
+
+      .modal.is-active .modal-background {
+        background: linear-gradient(45deg, #6a85b6 0%, #4a90e2 100%);
+        background-color: #4a90e2;
+      }
+
+      .vertical-testimonials .vtestimonial-item .vt-content .vt-name {
+        color: black;
+      }
+
+      .flex-card.testimonial-card .testimonial-title,
+      .network-grid .testimonial-card.network-card .testimonial-title,
+      .testimonial-card.project-card .testimonial-title,
+      .testimonial-card.profile-card .testimonial-title,
+      .carousel-wrap
+        .testimonials-solo-carousel
+        .testimonial-card.testimonial-item
+        .testimonial-title {
+        color: black;
+      }
+
+      ::selection {
+        background: #4a90e2; /* WebKit/Blink Browsers */
+      }
+      ::-moz-selection {
+        background: #4a90e2; /* Gecko Browsers */
+      }
+
+      .wrapper {
+        width: 90%;
+        margin-left: 5%;
+      }
+
+      .showcase video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #414a4c;
+        mix-blend-mode: overlay;
+      }
+      .sticky-menu-color {
+        color: white !important;
+        background-color: inherit;
+      }
+      .video-text-header {
+        color: white;
+      }
+
+      .navbar-item,
+      .navbar-link {
+        color: white;
+        font-family: "Anton", sans-serif;
+      }
+
+      .navbar-wrapper .navbar-item {
+        font-family: "Anton", sans-serif;
+      }
+
+      .navbar-wrapper.navbar-faded {
+        background: #000;
+        -webkit-box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
+        box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
+      }
+
+      .navbar-item img {
+        max-height: 100%;
+      }
+
+      .navbar-wrapper .navbar-brand img {
+        height: 60px !important;
+      }
+
+      .footer-light-medium .footer-body .small-footer-logo {
+        height: 85px;
+      }
+
+      .footer-light-medium {
+        padding-bottom: 0 !important;
+        padding-top: 4rem !important;
+        background: #000;
+      }
+
+      .footer-light-medium .footer-body .footer-column .column-header {
+        color: #606060;
+      }
+
+      .footer-icons {
+        height: 20px;
+        width: 20px;
+      }
+
+      a:hover {
+        color: white !important;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .mobile-wrapper {
+          width: 90%;
+          margin-left: 5%;
+        }
+      }
+    </style>
+  </head>
+
+  <body onload="contents()">
+    <section class="hero is-fullheight showcase">
+      <nav
+        class="navbar navbar-wrapper navbar-default navbar-fade is-fixed-top is-transparent"
+      >
+        <div class="container">
+          <!-- Brand -->
+          <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+              <img class="switcher-logo" src="../img/logo.png" alt="" />
+            </a>
+
+            <!-- Responsive toggle -->
+            <div class="custom-burger" data-target="">
+              <a id="" class="responsive-btn" href="javascript:void(0);">
+                <span class="menu-toggle">
+                  <span class="icon-box-toggle">
+                    <span class="rotate">
+                      <i class="icon-line-top"></i>
+                      <i class="icon-line-center"></i>
+                      <i class="icon-line-bottom"></i>
+                    </span>
+                  </span>
+                </span>
+              </a>
+            </div>
+            <!-- /Responsive toggle -->
+          </div>
+
+          <!-- Navbar menu -->
+          <div class="navbar-menu">
+            <!-- Navbar Start -->
+            <div class="navbar-start">
+              <!-- Navbar item -->
+            </div>
+
+            <!-- Navbar end -->
+            <div id="navEnd" class="navbar-end">
+              <!-- Navbar item -->
+              <a class="navbar-item" href="#"> ¿Quienes somos? </a>
+              <!-- Navbar item -->
+              <a href="#" class="navbar-item">¿Qué hacemos?</a>
+              <!-- Navbar item -->
+              <a class="navbar-item" href="#"> Galería </a>
+
+              <hr
+                style="width: 70%; margin-left: 15%"
+                class="is-hidden-desktop"
+              />
+            </div>
+          </div>
+        </div>
+      </nav>
+      <video src="../video/video.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <!---
+      <div class="hero-body">
+        <div class="wrapper">
+          <p class="title is-1 video-text-header">Rhetorik Digital Media</p>
+          <p class="subtitle is-4 video-text-header">
+            Soluciones integrales para tu negocio
+          </p>
+        </div>
+      </div>
+    --->
+    </section>
+
+    <!--Footer-->
+    <footer class="footer-light-medium">
+      <div class="container">
+        <div class="columns footer-body">
+          <!-- Column -->
+          <div class="column is-4">
+            <div class="pt-10 pb-10">
+              <img class="small-footer-logo" src="../img/logo.png" alt="" />
+
+              <div class="footer-description">
+                Somos una empresa dedicada a crear contenido digital que cautive
+                a la comunidad de tu negocio.
+              </div>
+            </div>
+            <div>
+              <div class="social-links">
+                <a href="#">
+                  <ion-icon
+                    class="footer-icons"
+                    name="logo-whatsapp"
+                  ></ion-icon>
+                </a>
+                <a href="#">
+                  <ion-icon
+                    class="footer-icons"
+                    name="logo-instagram"
+                  ></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Column -->
+          <div class="column is-6 is-offset-2">
+            <div class="columns">
+              <!-- Column -->
+              <div class="column">
+                <ul class="footer-column">
+                  <li class="column-header">Links 1</li>
+                  <li class="column-item"><a href="#">Lorem</a></li>
+                  <li class="column-item">
+                    <a href="#">Lorem</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Column -->
+              <div class="column">
+                <ul class="footer-column">
+                  <li class="column-header">Terms</li>
+                  <li class="column-item"><a href="#">Terms of Service</a></li>
+                  <li class="column-item"><a href="#">Privacy policy</a></li>
+                  <li class="column-item">
+                    Copyright &copy; 2022 Rhetorik&nbsp;
+                    <span id="currentYear"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-copyright has-text-centered">
+          <!--<p>&copy; 2019-2020 | <a href="https://cssninja.io">Css Ninja</a> | All Rights Reserved.</p>-->
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal Markup -->
+    <div id="vertical-form-modal" class="modal modal-sm">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="flex-card simple-shadow">
+          <div class="card-body">
+            <h2 class="title has-text-centered is-3 mb-40">Become a member</h2>
+            <h5 class="subtitle has-text-centered is-5 mb-40">
+              Exclusive monthly cupons
+            </h5>
+            <div class="control-material is-accent">
+              <input class="material-input" type="text" required />
+              <span class="material-highlight"></span>
+              <span class="bar"></span>
+              <label>Name *</label>
+            </div>
+            <div class="control-material is-accent">
+              <input class="material-input" type="email" required />
+              <span class="material-highlight"></span>
+              <span class="bar"></span>
+              <label>Email *</label>
+            </div>
+            <div class="mt-20">
+              <button
+                class="button button-cta btn-align raised is-fullwidth no-lh site-blue"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="modal-close is-large is-hidden"
+        aria-label="close"
+      ></button>
+    </div>
+    <!-- /Modal Markup -->
+
+    <!-- Back To Top Button -->
+    <div id="backtotop"><a href="#"></a></div>
+    <script>
+      const d = new Date();
+      const cyear = d.getFullYear();
+      const ylim = cyear - 18;
+      //alert(cyear - 18);
+
+      window.addEventListener("scroll", function () {
+        if (this.pageYOffset > 40) {
+          document.getElementById("navEnd").classList.add("sticky-menu-color");
+        } else {
+          document
+            .getElementById("navEnd")
+            .classList.remove("sticky-menu-color");
+        }
+      });
+
+      const d = new Date();
+      document.getElementById("currentYear").innerHTML = d.getFullYear();
+    </script>
+    <script src="prods.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/core.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
