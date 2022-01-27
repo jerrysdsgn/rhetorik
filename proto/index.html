@@ -36,6 +36,24 @@
     <style>
       html {
         scroll-behavior: smooth;
+        background: black;
+      }
+
+      p {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .text-white {
+        color: white !important;
+      }
+
+      .text-grey {
+        color: #7a7a7a;
+      }
+
+      .rh-yellow {
+        background: #fa9b05 !important;
+        border: 1px solid #fa9b05;
       }
 
       .navbar-wrapper .account-dropdown .dropdown-trigger .button img {
@@ -77,6 +95,14 @@
         box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
           0 4px 23px 0px rgb(0 0 0 / 12%),
           0 8px 10px -5px rgb(140 140 249 / 20%) !important;
+      }
+
+      .listing li {
+        font-size: 20px;
+      }
+
+      .desc-text {
+        font-size: 20px;
       }
 
       .menu-ul li {
@@ -182,6 +208,11 @@
         font-family: "Anton", sans-serif;
       }
 
+      .is-clean,
+      .clean-text {
+        font-family: "Anton", sans-serif !important;
+      }
+
       .navbar-wrapper .navbar-item {
         font-family: "Anton", sans-serif;
       }
@@ -221,6 +252,42 @@
 
       a:hover {
         color: white !important;
+      }
+
+      .is-pricing-card .pricing-icon {
+        background: #0e1111;
+      }
+
+      .services-icons {
+        color: white;
+      }
+
+      .iframe-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        border-radius: 5px;
+      }
+
+      /* Then style the iframe to fit in the container div with full height and width */
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .services-not {
+        height: 400px;
+        border-radius: 14px;
+      }
+
+      .gallery-imgs img {
+        cursor: pointer;
       }
 
       @media only screen and (max-width: 600px) {
@@ -285,9 +352,9 @@
           </div>
         </div>
       </nav>
-      <video src="../video/video.mp4" muted loop autoplay></video>
+
+      <video src="../video/trimmed.mp4" muted loop autoplay></video>
       <div class="overlay"></div>
-      <!---
       <div class="hero-body">
         <div class="wrapper">
           <p class="title is-1 video-text-header">Rhetorik Digital Media</p>
@@ -296,7 +363,419 @@
           </p>
         </div>
       </div>
+    </section>
+
+    <!--HERO [WHAT: PROPUESTA DE VALOR]-->
+    <section class="hero is-fullheight initial-message">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div style="margin-top: -4rem" class="column is-8 is-offset-2">
+              <h1 class="title is-1 text-white">
+                Creamos contenido que te ayude a atraer, mantener, crecer y
+                posicionarte en tu mercado objetivo.
+              </h1>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product -->
+    <div id="product" class="section is-medium">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="columns is-vcentered">
+            <!-- Content -->
+            <div class="column is-4">
+              <div class="service-box">
+                <h2 class="service-title text-white">¿QUÉ HACEMOS?</h2>
+                <br />
+                <p class="text-grey desc-text">
+                  Sabemos lo importante que es para ti la estabilidad y
+                  crecimiento de tu negocio.
+                </p>
+                <p class="text-grey desc-text">
+                  Ofrecemos un conjunto de servicios que ...
+                </p>
+              </div>
+            </div>
+            <!-- Icons -->
+            <div class="column is-7 is-offset-1">
+              <div class="columns is-vcentered is-multiline">
+                <!-- Icon block -->
+                <div class="column is-6">
+                  <div class="agency-icon-box">
+                    <div class="is-icon-reveal">
+                      <ion-icon
+                        size="large"
+                        class="services-icons"
+                        name="videocam-outline"
+                      ></ion-icon>
+                    </div>
+                    <div class="box-title text-white">
+                      <a class="text-white" href="">VIDEO MARKETING</a>
+                    </div>
+                    <p class="box-content text-grey">
+                      Crear relaciones estrechas y duraderas con nuestros
+                      clientes, ayudando a generar estrategias de valor que
+                      alienten el crecimiento mutuo.
+                    </p>
+                  </div>
+                </div>
+                <!-- Icon block -->
+                <div class="column is-6">
+                  <div class="agency-icon-box">
+                    <div class="is-icon-reveal">
+                      <ion-icon
+                        size="large"
+                        class="services-icons"
+                        name="camera-outline"
+                      ></ion-icon>
+                    </div>
+                    <div class="box-title text-white">
+                      <a class="text-white" href="">PHOTO SESSIONS</a>
+                    </div>
+                    <p class="box-content text-grey">
+                      Dar a conocer el valor de tu negocio para poder cautivar a
+                      tus clientes. Creamos un impacto en el segmento más
+                      adecuado a tus necesidades.
+                    </p>
+                  </div>
+                </div>
+                <!-- Icon block -->
+                <div class="column">
+                  <div class="agency-icon-box">
+                    <div class="is-icon-reveal">
+                      <ion-icon
+                        size="large"
+                        class="services-icons"
+                        name="share-social-outline"
+                      ></ion-icon>
+                    </div>
+                    <div class="box-title text-white">
+                      <a class="text-white" href="">RHETORIK PROGRAM</a>
+                    </div>
+                    <p class="box-content text-grey">
+                      Respeto y Honestidad nos definen. Generamos un entorno
+                      ameno, empático y productivo que incentive la
+                      responsabilidad y el compromiso.
+                    </p>
+                  </div>
+                </div>
+                <!-- Icon block -->
+                <div class="column is-6">
+                  <div class="agency-icon-box">
+                    <div class="is-icon-reveal">
+                      <ion-icon
+                        size="large"
+                        class="services-icons"
+                        name="code-slash-outline"
+                      ></ion-icon>
+                    </div>
+                    <div class="box-title text-white">
+                      <a class="text-white" href="">DISEÑO WEB</a>
+                    </div>
+                    <p class="box-content text-grey">
+                      Tenemos alianza con SimplyDigital, una agencia de diseño
+                      web que puede darle una nueva vida a tu Negocio Online.
+                      ¡No te quedes atrás!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- Video -->
+    <!----
+    <div class="section is-medium">
+      <div class="container">
+        <div class="columns is-vcentered quick-feature-wrap">
+          <div class="column is-4">
+         
+            <div class="title quick-feature">
+              <h2 class="clean-text text-white">VIDEO</h2>
+            </div>
+            <div class="title-divider rh-yellow"></div>
+            <br />
+            <ul class="listing text-white">
+              <li>Cortometraje: musical, corporativo, vlog</li>
+              <br />
+              <li>
+                Promocional: diseño personalizado para diversas plataformas
+                digitales.
+              </li>
+              <br />
+              <li>
+                Aéreo: tomas aéreas profesionales (FPV RACE CINEMATIC: SOON)
+              </li>
+              <br />
+              <li>360°: sistemas Cardboard o VR</li>
+            </ul>
+          </div>
+
+          <div class="column is-7 is-offset-2">
+            <div class="iframe-container">
+              <iframe
+                class="responsive-iframe"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/NjMbfyzE4oQ?start=38&vq=large"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                autoplay
+                muted="muted"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  -->
+
+    <!-- /Feature -->
+    <!----
+    <div class="section is-medium">
+      <div class="container">
+        <div class="columns is-vcentered quick-feature-wrap">
+          <div class="column is-6">
+            <img
+              src="https://static.wixstatic.com/media/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_480,h_520,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.webp"
+              data-base-url="assets/img/graphics/icons/kit2-3"
+              data-extension=".svg"
+              alt=""
+            />
+          </div>
+
+          <div class="column is-4 is-offset-2">
+        
+            <div class="title quick-feature">
+              <h2 class="clean-text text-white">FOTOGRAFÍA</h2>
+            </div>
+            <div class="title-divider rh-yellow"></div>
+            <br />
+            <ul class="listing text-white">
+              <li>Producto</li>
+              <br />
+              <li>Modelaje</li>
+              <br />
+              <li>Diseño Publicitario</li>
+              <br />
+              <li>Promocional: fotografía con fondo digital</li>
+              <br />
+              <li>Aéreo: fotografía por drone</li>
+              <br />
+              <li>360°: sistemas Cardboard y POV</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     --->
+
+    <section class="hero is-medium initial-message">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div style="margin-top: -4rem" class="column is-9">
+              <h3 class="title is-4">Video</h3>
+              <h1 class="subtitle is-3 text-white">
+                Creamos contenido que te ayude a atraer, mantener, crecer y
+                posicionarte en tu mercado objetivo.
+              </h1>
+              <div class="columns is-vcentered">
+                <div class="column">
+                  <ul>
+                    <li class="subtitle is-5">
+                      Cortometraje: musical, corporativo, vlog
+                    </li>
+
+                    <li class="subtitle is-5">
+                      Promocional: diseño personalizado para diversas
+                      plataformas digitales.
+                    </li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul>
+                    <li class="subtitle is-5">360°: sistemas Cardboard o VR</li>
+
+                    <li class="subtitle is-5">
+                      Aéreo: tomas aéreas profesionales (FPV RACE CINEMATIC:
+                      SOON)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+            </div>
+          </div>
+          <div class="columns is-vcentered">
+            <div class="column">
+              <div class="iframe-container">
+                <iframe
+                  class="responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/NjMbfyzE4oQ?start=38&vq=large"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  autoplay
+                  muted="muted"
+                ></iframe>
+              </div>
+              <span class="white-text">GAV Detailing</span>
+            </div>
+            <div class="column">
+              <div class="iframe-container">
+                <iframe
+                  class="responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/YwJ3wygrzso?start=38&vq=large"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  autoplay
+                  muted="muted"
+                ></iframe>
+              </div>
+              <span class="white-text">Rhetorik Video Reel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--GALERÏA-->
+    <section class="hero is-medium initial-message">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div style="margin-top: -4rem" class="column is-9">
+              <h3 class="title is-4">Galería</h3>
+              <h1 class="subtitle is-3 text-white">
+                Creamos contenido que te ayude a atraer, mantener, crecer y
+                posicionarte en tu mercado objetivo.
+              </h1>
+              <div class="columns is-vcentered">
+                <div class="column">
+                  <ul>
+                    <li class="subtitle is-5">Producto</li>
+
+                    <li class="subtitle is-5">Modelaje</li>
+
+                    <li class="subtitle is-5">Diseño Publicitario</li>
+                  </ul>
+                </div>
+                <div class="column">
+                  <ul>
+                    <li class="subtitle is-5">
+                      Promocional: fotografía con fondo digital
+                    </li>
+
+                    <li class="subtitle is-5">Aéreo: fotografía por drone</li>
+
+                    <li class="subtitle is-5">
+                      360°: sistemas Cardboard y POV
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+            </div>
+          </div>
+          <div class="columns gallery-imgs">
+            <div class="column">
+              <img src="../img/logo.png" alt="" />
+            </div>
+            <div class="column">
+              <img src="../img/logo.png" alt="" />
+            </div>
+            <div class="column">
+              <img src="../img/logo.png" alt="" />
+            </div>
+            <div class="column">
+              <img src="../img/logo.png" alt="" />
+            </div>
+          </div>
+          <div class="columns gallery-imgs">
+            <div class="column">
+              <img src="../img/logo.png" alt="" />
+            </div>
+            <div class="column">
+              <img src="../img/logo.png" alt="" />
+            </div>
+            <div class="column">
+              <img src="../img/logo.png" alt="" />
+            </div>
+            <div class="column">
+              <img src="../img/logo.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--RRSS-->
+    <section class="hero is-medium initial-message">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div style="margin-top: -4rem" class="column is-8">
+              <h3 class="title is-4">Rhetorik Program</h3>
+              <h1 class="subtitle is-3 text-white">
+                Creamos contenido que te ayude a atraer, mantener, crecer y
+                posicionarte en tu mercado objetivo.
+              </h1>
+              <p class="grey-text subtitle is-5">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
+                vitae incidunt ad quis dicta veniam omnis dolorum natus cumque
+                sapiente asperiores, ullam nulla officiis ipsum veritatis
+                assumenda praesentium optio perspiciatis!
+              </p>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--WEB DESIGN-->
+    <section class="hero is-medium initial-message">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            <div style="margin-top: -4rem" class="column is-8">
+              <h3 class="title is-4">Diseño Web</h3>
+              <h1 class="subtitle is-3 text-white">
+                Creamos contenido que te ayude a atraer, mantener, crecer y
+                posicionarte en tu mercado objetivo.
+              </h1>
+              <p class="grey-text subtitle is-5">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
+                vitae incidunt ad quis dicta veniam omnis dolorum natus cumque
+                sapiente asperiores, ullam nulla officiis ipsum veritatis
+                assumenda praesentium optio perspiciatis!
+              </p>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--Footer-->
@@ -426,6 +905,7 @@
       document.getElementById("currentYear").innerHTML = d.getFullYear();
     </script>
     <script src="prods.js"></script>
+    <script src="../js/gallery.js"></script>
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/core.js"></script>
     <script
