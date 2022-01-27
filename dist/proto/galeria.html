@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Paysage - Galería</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <script src="https://use.fontawesome.com/cf546031f8.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Oswald", sans-serif;
+        text-transform: uppercase;
+      }
+
+      .item-slide {
+        box-sizing: border-box;
+      }
+
+      img:hover {
+        cursor: pointer;
+      }
+
+      nav {
+        z-index: 1 !important;
+      }
+
+      .button {
+        padding-bottom: 1.25em !important;
+        padding-left: 1em !important;
+        padding-right: 1em !important;
+        padding-top: 1.25em !important;
+      }
+
+      .modal-gallery {
+        display: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-content {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0);
+        width: 90%;
+        max-width: 1200px;
+        max-height: 700px;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .modal img {
+        height: 100vh;
+      }
+
+      .item-slide {
+        display: none;
+      }
+
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .item-slide img {
+        max-width: 1200px;
+      }
+
+      .caption-container {
+        color: white;
+      }
+
+      .column img {
+        margin-top: 20px;
+      }
+
+      .dark-card {
+        background: black;
+      }
+
+      .transform-transparent {
+        opacity: 0;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .img-card {
+        position: relative;
+      }
+
+      .img-card img {
+        display: block;
+        width: 100%;
+      }
+
+      .image-title {
+        font-size: 2em;
+      }
+
+      .image-description {
+        font-size: 1.25em;
+        margin-top: 0.25em;
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+      }
+
+      .image-overlay > * {
+        transform: translateY(20px);
+        transition: transform 0.25s;
+      }
+
+      .image-overlay:hover > * {
+        transform: translateY(0);
+      }
+
+      .image-overlay:hover {
+        opacity: 1;
+      }
+
+      .caption-txt {
+        background: black;
+        padding: 10px;
+        color: white;
+        display: none;
+      }
+
+      .item-slide {
+        margin-top: 5%;
+      }
+
+      @media only screen and (max-width: 760px) {
+        .item-slide img {
+          max-width: 100%;
+        }
+        .modal img {
+          height: auto;
+        }
+        .caption-txt {
+          display: block;
+        }
+        .item-slide {
+          margin-left: 10%;
+          margin-top: 50%;
+        }
+      }
+      .size-one {
+        aspect-ratio: 800 / 1000;
+      }
+      .size-two {
+        aspect-ratio: 550 / 800;
+      }
+      .size-three {
+        aspect-ratio: 700 / 800;
+      }
+      .size-four {
+        aspect-ratio: 600 / 800;
+      }
+      .size-five {
+        aspect-ratio: 650 / 800;
+      }
+      .size-six {
+        aspect-ratio: 900 / 800;
+      }
+      .size-seven {
+        aspect-ratio: 550 / 800;
+      }
+      .size-eight {
+        aspect-ratio: 550 / 800;
+      }
+      .size-nine {
+        aspect-ratio: 1000 / 800;
+      }
+    </style>
+  </head>
+  <body>
+    <!---Stock--->
+    <section class="section">
+      <div class="container is-fluid">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <div class="img-card">
+              <img class="size-one" id="omeImg" src="../img/logo.png" />
+              <div class="image-overlay" onclick="openModal();currentSlide(1)">
+                <div class="image-title">Lorem</div>
+                <!--<p class="image-description">The description</p>-->
+              </div>
+            </div>
+            <div class="img-card">
+              <img class="size-four" src="../img/logo.png>" />
+              <div class="image-overlay" onclick="openModal();currentSlide(2)">
+                <div class="image-title">Lorem</div>
+                <!--<p class="image-description">The description</p>-->
+              </div>
+            </div>
+            <div class="img-card">
+              <img class="size-six" src="../img/logo.png" />
+              <div class="image-overlay" onclick="openModal();currentSlide(3)">
+                <div class="image-title">Lorem</div>
+                <!--<p class="image-description">The description</p>-->
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="img-card">
+              <img class="size-two" src="../img/logo.png" />
+              <div class="image-overlay" onclick="openModal();currentSlide(4)">
+                <div class="image-title">Lorem</div>
+                <!--<p class="image-description">The description</p>-->
+              </div>
+            </div>
+            <div class="img-card">
+              <img class="size-nine" class="size-one" src="../img/logo.png" />
+              <div class="image-overlay" onclick="openModal();currentSlide(5)">
+                <div class="image-title">Lorem</div>
+                <!--<p class="image-description">The description</p>-->
+              </div>
+            </div>
+            <div class="img-card">
+              <img class="size-three" src="../img/logo.png" />
+              <div class="image-overlay" onclick="openModal();currentSlide(6)">
+                <div class="image-title">Lorem</div>
+                <!--<p class="image-description">The description</p>-->
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="img-card">
+              <img class="size-three" src="../img/logo.png" />
+              <div class="image-overlay" onclick="openModal();currentSlide(7)">
+                <div class="image-title">Lorem</div>
+                <!--<p class="image-description">The description</p>-->
+              </div>
+            </div>
+            <div class="img-card">
+              <img class="size-five" src="../img/logo.png" />
+              <div class="image-overlay" onclick="openModal();currentSlide(8)">
+                <div class="image-title">Lorem</div>
+                <!--<p class="image-description">The description</p>-->
+              </div>
+            </div>
+            <div class="img-card">
+              <img class="size-three" src="../img/logo.png" />
+              <div class="image-overlay" onclick="openModal();currentSlide(9)">
+                <div class="image-title">Lorem</div>
+                <!--<p class="image-description">The description</p>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-gallery" id="myModal">
+          <div class="modal-content is-vcentered">
+            <div class="item-slide">
+              <img src="../img/logo.png" />
+              <span class="caption-txt">Lorem</span>
+            </div>
+            <div class="item-slide">
+              <img src="../img/logo.png" />
+              <span class="caption-txt">Lorem</span>
+            </div>
+            <div class="item-slide">
+              <img src="../img/logo.png" />
+              <span class="caption-txt">Lorem</span>
+            </div>
+            <div class="item-slide">
+              <img src="../img/logo.png" />
+              <span class="caption-txt">Lorem</span>
+            </div>
+            <div class="item-slide">
+              <img src="../img/logo.png" />
+              <span class="caption-txt">Lorem</span>
+            </div>
+            <div class="item-slide">
+              <img src="../img/logo.png" />
+              <span class="caption-txt">Lorem</span>
+            </div>
+            <div class="item-slide">
+              <img src="../img/logo.png" />
+              <span class="caption-txt">Lorem</span>
+            </div>
+            <div class="item-slide">
+              <img src="../img/logo.png" />
+              <span class="caption-txt">Lorem</span>
+            </div>
+            <div class="item-slide">
+              <img src="../img/logo.png" />
+              <span class="caption-txt">Lorem</span>
+            </div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <button
+            onclick="closeModal()"
+            class="modal-close is-large"
+            aria-label="close"
+          ></button>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/gallery.js"></script>
+  </body>
+</html>
