@@ -34,9 +34,23 @@
     />
 
     <style>
+      *::selection {
+        background: #000 !important;
+        color: #fff !important;
+      }
+
       html {
         scroll-behavior: smooth;
         background: black;
+      }
+
+      .navbar {
+        /*min-height: 3.25rem;*/
+        min-height: 5.25rem;
+      }
+
+      .navbar-wrapper .navbar-brand img {
+        height: 70px !important;
       }
 
       p {
@@ -227,8 +241,14 @@
         max-height: 100%;
       }
 
-      .navbar-wrapper .navbar-brand img {
-        height: 60px !important;
+      .section-wrap .section.image-section {
+        background: #000;
+      }
+
+      .section-wrap .section.image-section .title,
+      .section-wrap .section.image-section .subtitle,
+      .section-wrap .section.image-section p {
+        color: #444f60;
       }
 
       .footer-light-medium .footer-body .small-footer-logo {
@@ -290,6 +310,38 @@
         cursor: pointer;
       }
 
+      .spacer {
+        margin-bottom: 120px;
+      }
+
+      .section .feature-headline {
+        color: #fff !important;
+      }
+
+      .navigation-tabs.outlined-pills .tabs ul li.is-active a {
+        color: #fff;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+
+      .navigation-tabs.outlined-pills .tabs ul li.is-active a:hover {
+        color: #fff;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+
+      .section-wrap
+        .section.image-section
+        .support-features
+        .support-card:hover {
+        background: #19202b;
+        border: 1px solid #212a38;
+      }
+
+      .section-wrap .section.image-section {
+        padding-left: 5%;
+      }
+
       @media only screen and (max-width: 600px) {
         .mobile-wrapper {
           width: 90%;
@@ -345,6 +397,30 @@
               <a class="navbar-item" href="#"> Galería </a>
 
               <a class="navbar-item" href="">|</a>
+
+              <a class="navbar-item" href="">
+                <ion-icon
+                  size="large"
+                  class="services-icons"
+                  name="logo-instagram"
+                ></ion-icon>
+              </a>
+
+              <a class="navbar-item" href="">
+                <ion-icon
+                  size="large"
+                  class="services-icons"
+                  name="logo-facebook"
+                ></ion-icon>
+              </a>
+
+              <a class="navbar-item" href="">
+                <ion-icon
+                  size="large"
+                  class="services-icons"
+                  name="videocam-outline"
+                ></ion-icon>
+              </a>
 
               <hr
                 style="width: 70%; margin-left: 15%"
@@ -627,7 +703,96 @@
     </div>
 
     --->
+    <span id="video"></span>
+    <div class="section initial-message">
+      <div class="container">
+        <!-- Title -->
+        <div class="section-title-wrapper has-text-centered pt-40 pb-40">
+          <h3 class="title is-4">Video</h3>
+          <h1 class="subtitle is-3 text-white">
+            Creamos contenido que te ayude a atraer, mantener, crecer y
+            posicionarte en tu mercado objetivo.
+          </h1>
+        </div>
 
+        <div class="columns is-vcentered is-multiline pb-60">
+          <div class="column is-8 is-offset-2 is-relative is-centered-portrait">
+            <!-- 16by9 video -->
+            <div class="bulkit-player-container is-16by9 reversed-play">
+              <iframe
+                class="responsive-iframe"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/NjMbfyzE4oQ?start=38&vq=large"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                autoplay
+                muted="muted"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="column is-4 is-offset-2">
+            <div class="side-title mb-10">
+              <h3 class="subtitle is-5">
+                Cortometraje: musical, corporativo, vlog
+              </h3>
+            </div>
+            <!----
+            <p class="side-paragraph is-size-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eodem
+              modo is enim tibi nemo dabit, quod, expetendum sit, id esse
+              laudabile.
+            </p>
+          --></div>
+
+          <div class="column is-4">
+            <div class="side-title mb-10">
+              <h3 class="subtitle is-5">360°: sistemas Cardboard o VR</h3>
+            </div>
+            <!----
+            <p class="side-paragraph is-size-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eodem
+              modo is enim tibi nemo dabit, quod, expetendum sit, id esse
+              laudabile.
+            </p>
+          --></div>
+
+          <div class="column is-4 is-offset-2">
+            <div class="side-title mb-10">
+              <h3 class="subtitle is-5">
+                Promocional: diseño personalizado para diversas plataformas
+                digitales.
+              </h3>
+            </div>
+            <!----
+            <p class="side-paragraph is-size-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eodem
+              modo is enim tibi nemo dabit, quod, expetendum sit, id esse
+              laudabile.
+            </p>
+          --></div>
+
+          <div class="column is-4">
+            <div class="side-title mb-10">
+              <h3 class="subtitle is-5">
+                Aéreo: tomas aéreas profesionales (FPV RACE CINEMATIC: SOON)
+              </h3>
+            </div>
+            <!----
+            <p class="side-paragraph is-size-6">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eodem
+              modo is enim tibi nemo dabit, quod, expetendum sit, id esse
+              laudabile.
+            </p>
+          --></div>
+        </div>
+      </div>
+    </div>
+
+    <!----
     <section class="hero is-medium initial-message">
       <div class="hero-body">
         <div class="container">
@@ -704,78 +869,88 @@
         </div>
       </div>
     </section>
+    --->
+
+    <div class="spacer"></div>
 
     <!--GALERÏA-->
-    <section class="hero is-medium initial-message">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-vcentered">
-            <div style="margin-top: -4rem" class="column is-9">
-              <h3 class="title is-4">Galería</h3>
-              <h1 class="subtitle is-3 text-white">
-                Creamos contenido que te ayude a atraer, mantener, crecer y
-                posicionarte en tu mercado objetivo.
-              </h1>
-              <div class="columns is-vcentered">
-                <div class="column">
-                  <ul>
-                    <li class="subtitle is-5">Producto</li>
+    <span id="galeria"></span>
+    <div class="section-wrap is-hidden-mobile">
+      <div class="section is-medium image-section">
+        <div class="container initial-message">
+          <h3 class="title is-4">Fotografía</h3>
+          <h1 class="subtitle is-3 text-white">
+            Creamos contenido que te ayude a atraer, mantener, crecer y
+            posicionarte en tu mercado objetivo.
+          </h1>
 
-                    <li class="subtitle is-5">Modelaje</li>
-
-                    <li class="subtitle is-5">Diseño Publicitario</li>
-                  </ul>
-                </div>
-                <div class="column">
-                  <ul>
-                    <li class="subtitle is-5">
-                      Promocional: fotografía con fondo digital
-                    </li>
-
-                    <li class="subtitle is-5">Aéreo: fotografía por drone</li>
-
-                    <li class="subtitle is-5">
-                      360°: sistemas Cardboard y POV
-                    </li>
-                  </ul>
-                </div>
+          <div class="support-features">
+            <div class="columns is-multiline is-vcentered">
+              <div class="column is-6">
+                <h3 class="subtitle is-5">Producto</h3>
               </div>
-              <br />
+              <div class="column is-6">
+                <h3 class="subtitle is-5">Fotografía con fondo digital</h3>
+              </div>
+              <div class="column is-6">
+                <h3 class="subtitle is-5">Modelaje</h3>
+              </div>
+              <div class="column is-6">
+                <h3 class="subtitle is-5">Fotografía por drone</h3>
+              </div>
+              <div class="column is-6">
+                <h3 class="subtitle is-5">Diseño Publicitario</h3>
+              </div>
+              <div class="column is-6">
+                <h3 class="subtitle is-5">Sistemas Cardboard y POV</h3>
+              </div>
             </div>
+            <br />
+            <a href="galeria.html">
+              <h2 style="color: white" class="subtitle is-4">Ir a galería</h2>
+            </a>
           </div>
-          <div class="columns gallery-imgs">
-            <div class="column">
-              <img src="../img/logo.png" alt="" />
-            </div>
-            <div class="column">
-              <img src="../img/logo.png" alt="" />
-            </div>
-            <div class="column">
-              <img src="../img/logo.png" alt="" />
-            </div>
-            <div class="column">
-              <img src="../img/logo.png" alt="" />
-            </div>
-          </div>
-          <div class="columns gallery-imgs">
-            <div class="column">
-              <img src="../img/logo.png" alt="" />
-            </div>
-            <div class="column">
-              <img src="../img/logo.png" alt="" />
-            </div>
-            <div class="column">
-              <img src="../img/logo.png" alt="" />
-            </div>
-            <div class="column">
-              <img src="../img/logo.png" alt="" />
+        </div>
+      </div>
+      <div
+        class="right has-background-image"
+        data-background="../img/gallery_prev.png"
+        data-demo-background="../img/gallery_prev.png"
+      ></div>
+    </div>
+    <!--GALERÏA MOBILE-->
+    <div class="is-hidden-desktop">
+      <div class="hero is-fullheight">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <h2 class="title is-2">Fotografía</h2>
+                <br />
+                <ul>
+                  <li class="subtitle is-5">Producto</li>
+                  <li class="subtitle is-5">Fotografía con fondo digital</li>
+                  <li class="subtitle is-5">Modelaje</li>
+                  <li class="subtitle is-5">Fotografía por drone</li>
+                  <li class="subtitle is-5">Diseño Publicitario</li>
+                  <li class="subtitle is-5">Sistemas Cardboard y POV</li>
+                </ul>
+              </div>
+              <div class="column">
+                <figure class="image is-4by3">
+                  <img src="../img/gallery_prev.png" />
+                </figure>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div class="spacer"></div>
 
     <!--RRSS-->
+    <span id="rrss"></span>
     <section class="hero is-medium initial-message">
       <div class="hero-body">
         <div class="container">
@@ -800,28 +975,138 @@
     </section>
 
     <!--WEB DESIGN-->
-    <section class="hero is-medium initial-message">
-      <div class="hero-body">
-        <div class="container">
+    <span id="web"></span>
+    <div id="features" class="section is-medium">
+      <div class="container">
+        <!-- Title -->
+        <div class="section-title-wrapper has-text-centered">
+          <h3 class="title is-4">Diseño Web</h3>
+          <h1 class="subtitle is-3 text-white">
+            Hacemos brillar tu presencia en línea con un sitio web hecho a la
+            medida de tus necesidades.
+          </h1>
+        </div>
+
+        <div class="content-wrapper tabbed-features">
+          <!-- Navigation pills -->
           <div class="columns is-vcentered">
-            <div style="margin-top: -4rem" class="column is-8">
-              <h3 class="title is-4">Diseño Web</h3>
-              <h1 class="subtitle is-3 text-white">
-                Creamos contenido que te ayude a atraer, mantener, crecer y
-                posicionarte en tu mercado objetivo.
-              </h1>
-              <p class="grey-text subtitle is-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
-                vitae incidunt ad quis dicta veniam omnis dolorum natus cumque
-                sapiente asperiores, ullam nulla officiis ipsum veritatis
-                assumenda praesentium optio perspiciatis!
-              </p>
-              <br />
+            <div class="column">
+              <div class="navigation-tabs outlined-pills animated-tabs">
+                <div class="tabs is-centered">
+                  <ul>
+                    <li class="tab-link is-active" data-tab="new-deals">
+                      <a>Ecommerce</a>
+                    </li>
+                    <li class="tab-link" data-tab="invoices">
+                      <a>Landing Pages</a>
+                    </li>
+                    <li class="tab-link" data-tab="reporting">
+                      <a>Webapps</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Pill content -->
+                <div id="new-deals" class="navtab-content is-active">
+                  <div class="columns is-vcentered">
+                    <div class="column is-6">
+                      <figure class="image">
+                        <img src="../img/1.png" alt="" />
+                      </figure>
+                    </div>
+                    <div class="column is-6">
+                      <div class="inner-content">
+                        <h2 class="feature-headline">
+                          Create an incredible user and customer experience
+                        </h2>
+                        <br />
+                        <p class="grey-text subtitle is-5">
+                          Lorem ipsum dolor sit amet, vim quidam blandit
+                          voluptaria no, has eu lorem convenire incorrupte.
+                        </p>
+                        <br />
+                        <button class="button is-black is-medium">
+                          <ion-icon
+                            size="large"
+                            class="services-icons"
+                            name="videocam-outline"
+                          ></ion-icon
+                          >&nbsp;&nbsp;Lorem
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Pill content -->
+                <div id="invoices" class="navtab-content">
+                  <div class="columns is-vcentered">
+                    <div class="column is-6">
+                      <figure class="image">
+                        <img src="../img/3.png" alt="" />
+                      </figure>
+                    </div>
+                    <div class="column is-6">
+                      <div class="inner-content">
+                        <h2 class="feature-headline">
+                          Create invoices seamlessly and get paid incredibly
+                          fast
+                        </h2>
+                        <br />
+                        <p class="grey-text subtitle is-5">
+                          Lorem ipsum dolor sit amet, vim quidam blandit
+                          voluptaria no, has eu lorem convenire incorrupte.
+                        </p>
+                        <br />
+                        <button class="button is-black is-medium">
+                          <ion-icon
+                            size="large"
+                            class="services-icons"
+                            name="videocam-outline"
+                          ></ion-icon
+                          >&nbsp;&nbsp;Lorem
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Pill content -->
+                <div id="reporting" class="navtab-content">
+                  <div class="columns is-vcentered">
+                    <div class="column is-6">
+                      <figure class="image">
+                        <img src="../img/2.png" alt="" />
+                      </figure>
+                    </div>
+                    <div class="column is-6">
+                      <div class="inner-content">
+                        <h2 class="feature-headline">
+                          Get insight on your data and take managed decisions
+                        </h2>
+                        <br />
+                        <p class="grey-text subtitle is-5">
+                          Lorem ipsum dolor sit amet, vim quidam blandit
+                          voluptaria no, has eu lorem convenire incorrupte.
+                        </p>
+                        <br />
+                        <button class="button is-black is-medium">
+                          <ion-icon
+                            size="large"
+                            class="services-icons"
+                            name="videocam-outline"
+                          ></ion-icon
+                          >&nbsp;&nbsp;Lorem
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div class="spacer"></div>
 
     <!--Footer-->
     <footer class="footer-light-medium">
@@ -835,6 +1120,8 @@
               <div class="footer-description">
                 Somos una empresa dedicada a crear contenido digital que cautive
                 a la comunidad de tu negocio.
+                <br />
+                ¡Acércate a nosotros!
               </div>
             </div>
             <div>
