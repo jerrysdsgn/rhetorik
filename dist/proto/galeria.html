@@ -1,362 +1,1045 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le Paysage - Galería</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rhetorik - Galería</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
-    <script src="https://use.fontawesome.com/cf546031f8.js"></script>
+    <link rel="icon" type="image/x-icon" href="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/gallery.css" />
+    <!--Core CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/app.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      body {
-        font-family: sans-serif;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Oswald", sans-serif;
-        text-transform: uppercase;
-      }
-
-      .item-slide {
-        box-sizing: border-box;
-      }
-
-      img:hover {
-        cursor: pointer;
-      }
-
-      nav {
-        z-index: 1 !important;
-      }
-
-      .button {
-        padding-bottom: 1.25em !important;
-        padding-left: 1em !important;
-        padding-right: 1em !important;
-        padding-top: 1.25em !important;
-      }
-
-      .modal-gallery {
-        display: none;
-        position: fixed;
-        z-index: 9;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-      }
-
-      .modal-content {
-        position: relative;
-        background-color: rgba(0, 0, 0, 0);
-        width: 90%;
-        max-width: 1200px;
-        max-height: 700px;
-        overflow: hidden;
-        text-align: center;
-      }
-
-      .modal img {
-        height: 100vh;
-      }
-
-      .item-slide {
-        display: none;
-      }
-
-      .prev,
-      .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -50px;
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        -webkit-user-select: none;
-      }
-
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-
-      .item-slide img {
-        max-width: 1200px;
-      }
-
-      .caption-container {
-        color: white;
-      }
-
-      .column img {
-        margin-top: 20px;
-      }
-
-      .dark-card {
+      html {
+        scroll-behavior: smooth;
         background: black;
       }
 
-      .transform-transparent {
-        opacity: 0;
+      .navbar {
+        /*min-height: 3.25rem;*/
+        min-height: 5.25rem;
+        background: black;
       }
 
-      .hide {
-        display: none;
+      .navbar-wrapper .navbar-brand img {
+        height: 70px !important;
       }
 
-      .img-card {
-        position: relative;
+      p {
+        font-family: "Roboto", sans-serif;
       }
 
-      .img-card img {
+      .text-white {
+        color: white !important;
+      }
+
+      .text-grey {
+        color: #7a7a7a;
+      }
+
+      .rh-yellow {
+        background: #fa9b05 !important;
+        border: 1px solid #fa9b05;
+      }
+
+      .navbar-wrapper .account-dropdown .dropdown-trigger .button img {
         display: block;
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        min-height: 30px;
+        border-radius: 27%;
+      }
+
+      .spacer {
+        margin-bottom: 80px;
+      }
+
+      .kit-btn {
         width: 100%;
       }
 
-      .image-title {
-        font-size: 2em;
+      .grid-product {
+        padding: 30px;
       }
 
-      .image-description {
-        font-size: 1.25em;
-        margin-top: 0.25em;
+      .grid-products .grid-products-inner .grid-product .grid-product-info h4 {
+        font-family: "Roboto", sans-serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: green;
+        font-weight: bold;
       }
 
-      .image-overlay {
+      .grid-products .grid-products-inner .grid-product:hover .buttons .button {
+        background: red;
+        border-color: red;
+        color: #fff;
+        -webkit-box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
+          0 4px 23px 0px rgb(0 0 0 / 12%),
+          0 8px 10px -5px rgb(140 140 249 / 20%) !important;
+        box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
+          0 4px 23px 0px rgb(0 0 0 / 12%),
+          0 8px 10px -5px rgb(140 140 249 / 20%) !important;
+      }
+
+      .listing li {
+        font-size: 20px;
+      }
+
+      .desc-text {
+        font-size: 20px;
+      }
+
+      .menu-ul li {
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .button.is-link {
+        background: #4a90e2 !important;
+        color: white;
+      }
+
+      .button.is-link:hover {
+        background: lightsalmon !important;
+        color: black;
+      }
+
+      .site-blue {
+        background: #4a90e2 !important;
+        color: white;
+        border: none;
+      }
+
+      .site-blue:hover {
+        background: #4a90e2 !important;
+        color: white;
+        border: none;
+      }
+
+      .popular-categories .box.is-category:hover {
+        background: transparent;
+        border: inherit;
+      }
+
+      .popular-categories .box.is-category:hover .left h3,
+      .popular-categories .box.is-category:hover .left p {
+        color: #444f60 !important;
+        -webkit-box-shadow: -1px 3px 15px 0 rgb(0 0 0 / 6%);
+        box-shadow: -1px 3px 15px 0 rgb(0 0 0 / 6%);
+      }
+
+      .modal.is-active .modal-background {
+        background: linear-gradient(45deg, #6a85b6 0%, #4a90e2 100%);
+        background-color: #4a90e2;
+      }
+
+      .vertical-testimonials .vtestimonial-item .vt-content .vt-name {
+        color: black;
+      }
+
+      .flex-card.testimonial-card .testimonial-title,
+      .network-grid .testimonial-card.network-card .testimonial-title,
+      .testimonial-card.project-card .testimonial-title,
+      .testimonial-card.profile-card .testimonial-title,
+      .carousel-wrap
+        .testimonials-solo-carousel
+        .testimonial-card.testimonial-item
+        .testimonial-title {
+        color: black;
+      }
+
+      ::selection {
+        background: #4a90e2; /* WebKit/Blink Browsers */
+      }
+      ::-moz-selection {
+        background: #4a90e2; /* Gecko Browsers */
+      }
+
+      .wrapper {
+        width: 90%;
+        margin-left: 5%;
+      }
+
+      .showcase video {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.6);
+        object-fit: cover;
+        opacity: 0.8;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #414a4c;
+        mix-blend-mode: overlay;
+      }
+      .sticky-menu-color {
+        color: white !important;
+        background-color: inherit;
+      }
+      .video-text-header {
         color: white;
+      }
+
+      .navbar-item,
+      .navbar-link {
+        color: white;
+        font-family: "Anton", sans-serif;
+      }
+
+      .is-clean,
+      .clean-text {
+        font-family: "Anton", sans-serif !important;
+      }
+
+      .navbar-wrapper .navbar-item {
+        font-family: "Anton", sans-serif;
+      }
+
+      .navbar-wrapper.navbar-faded {
+        background: #000;
+        -webkit-box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
+        box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
+      }
+
+      .navbar-item img {
+        max-height: 100%;
+      }
+
+      .footer-light-medium .footer-body .small-footer-logo {
+        height: 85px;
+      }
+
+      .footer-light-medium {
+        padding-bottom: 5rem !important;
+        padding-top: 4rem !important;
+        background: #000;
+      }
+
+      .footer-light-medium .footer-body .footer-description {
+        color: #999;
+        padding: 10px 0;
+        font-size: 15px;
+      }
+
+      .footer-light-medium .footer-body .social-links a {
+        color: #999;
+        margin: 0 5px;
+      }
+
+      .footer-light-medium .footer-body .footer-column .column-item {
+        padding-bottom: 10px;
+        font-size: 0.9em;
+      }
+
+      .footer-light-medium .footer-body .footer-column .column-header {
+        color: #606060;
+      }
+
+      .footer-light-medium .footer-body .footer-column .column-item a {
+        color: #999;
+        font-size: 0.9em;
+      }
+
+      .footer-light-medium .footer-body .footer-column .column-header {
+        font-family: "Nexa Light", sans-serif;
+        text-transform: uppercase;
+        color: #444f60;
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 10px 0;
+      }
+
+      .footer-light-medium .footer-body .footer-column .column-header {
+        color: #606060;
+      }
+
+      .footer-icons {
+        height: 20px;
+        width: 20px;
+      }
+
+      a:hover {
+        color: white !important;
+      }
+
+      .is-pricing-card .pricing-icon {
+        background: #0e1111;
+      }
+
+      .services-icons {
+        color: white;
+      }
+
+      .iframe-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        border-radius: 5px;
+      }
+
+      /* Then style the iframe to fit in the container div with full height and width */
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .services-not {
+        height: 400px;
+        border-radius: 14px;
+      }
+
+      .gallery-imgs img {
         cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.25s;
       }
 
-      .image-overlay > * {
-        transform: translateY(20px);
-        transition: transform 0.25s;
+      .footer-light-medium .footer-body .footer-description {
+        color: #999;
+        padding: 10px 0;
       }
 
-      .image-overlay:hover > * {
-        transform: translateY(0);
-      }
-
-      .image-overlay:hover {
-        opacity: 1;
-      }
-
-      .caption-txt {
-        background: black;
-        padding: 10px;
-        color: white;
-        display: none;
-      }
-
-      .item-slide {
-        margin-top: 5%;
-      }
-
-      @media only screen and (max-width: 760px) {
-        .item-slide img {
-          max-width: 100%;
+      @media only screen and (max-width: 600px) {
+        .mobile-wrapper {
+          width: 90%;
+          margin-left: 5%;
         }
-        .modal img {
-          height: auto;
-        }
-        .caption-txt {
-          display: block;
-        }
-        .item-slide {
-          margin-left: 10%;
-          margin-top: 50%;
-        }
-      }
-      .size-one {
-        aspect-ratio: 800 / 1000;
-      }
-      .size-two {
-        aspect-ratio: 550 / 800;
-      }
-      .size-three {
-        aspect-ratio: 700 / 800;
-      }
-      .size-four {
-        aspect-ratio: 600 / 800;
-      }
-      .size-five {
-        aspect-ratio: 650 / 800;
-      }
-      .size-six {
-        aspect-ratio: 900 / 800;
-      }
-      .size-seven {
-        aspect-ratio: 550 / 800;
-      }
-      .size-eight {
-        aspect-ratio: 550 / 800;
-      }
-      .size-nine {
-        aspect-ratio: 1000 / 800;
       }
     </style>
+    <script src="https://use.fontawesome.com/cf546031f8.js"></script>
   </head>
   <body>
-    <!---Stock--->
-    <section class="section">
-      <div class="container is-fluid">
-        <div class="columns is-vcentered">
-          <div class="column">
-            <div class="img-card">
-              <img class="size-one" id="omeImg" src="../img/logo.png" />
-              <div class="image-overlay" onclick="openModal();currentSlide(1)">
-                <div class="image-title">Lorem</div>
-                <!--<p class="image-description">The description</p>-->
-              </div>
-            </div>
-            <div class="img-card">
-              <img class="size-four" src="../img/logo.png>" />
-              <div class="image-overlay" onclick="openModal();currentSlide(2)">
-                <div class="image-title">Lorem</div>
-                <!--<p class="image-description">The description</p>-->
-              </div>
-            </div>
-            <div class="img-card">
-              <img class="size-six" src="../img/logo.png" />
-              <div class="image-overlay" onclick="openModal();currentSlide(3)">
-                <div class="image-title">Lorem</div>
-                <!--<p class="image-description">The description</p>-->
-              </div>
-            </div>
+    <nav
+      class="navbar navbar-wrapper navbar-default navbar-fade is-fixed-top is-transparent"
+    >
+      <div class="container">
+        <!-- Brand -->
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img class="switcher-logo" src="../img/logo.png" alt="" />
+          </a>
+
+          <!-- Responsive toggle -->
+          <div class="custom-burger" data-target="">
+            <a id="" class="responsive-btn" href="javascript:void(0);">
+              <span class="menu-toggle">
+                <span class="icon-box-toggle">
+                  <span class="rotate">
+                    <i class="icon-line-top"></i>
+                    <i class="icon-line-center"></i>
+                    <i class="icon-line-bottom"></i>
+                  </span>
+                </span>
+              </span>
+            </a>
           </div>
-          <div class="column">
-            <div class="img-card">
-              <img class="size-two" src="../img/logo.png" />
-              <div class="image-overlay" onclick="openModal();currentSlide(4)">
-                <div class="image-title">Lorem</div>
-                <!--<p class="image-description">The description</p>-->
-              </div>
-            </div>
-            <div class="img-card">
-              <img class="size-nine" class="size-one" src="../img/logo.png" />
-              <div class="image-overlay" onclick="openModal();currentSlide(5)">
-                <div class="image-title">Lorem</div>
-                <!--<p class="image-description">The description</p>-->
-              </div>
-            </div>
-            <div class="img-card">
-              <img class="size-three" src="../img/logo.png" />
-              <div class="image-overlay" onclick="openModal();currentSlide(6)">
-                <div class="image-title">Lorem</div>
-                <!--<p class="image-description">The description</p>-->
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="img-card">
-              <img class="size-three" src="../img/logo.png" />
-              <div class="image-overlay" onclick="openModal();currentSlide(7)">
-                <div class="image-title">Lorem</div>
-                <!--<p class="image-description">The description</p>-->
-              </div>
-            </div>
-            <div class="img-card">
-              <img class="size-five" src="../img/logo.png" />
-              <div class="image-overlay" onclick="openModal();currentSlide(8)">
-                <div class="image-title">Lorem</div>
-                <!--<p class="image-description">The description</p>-->
-              </div>
-            </div>
-            <div class="img-card">
-              <img class="size-three" src="../img/logo.png" />
-              <div class="image-overlay" onclick="openModal();currentSlide(9)">
-                <div class="image-title">Lorem</div>
-                <!--<p class="image-description">The description</p>-->
-              </div>
-            </div>
-          </div>
+          <!-- /Responsive toggle -->
         </div>
 
-        <div class="modal-gallery" id="myModal">
-          <div class="modal-content is-vcentered">
-            <div class="item-slide">
-              <img src="../img/logo.png" />
-              <span class="caption-txt">Lorem</span>
-            </div>
-            <div class="item-slide">
-              <img src="../img/logo.png" />
-              <span class="caption-txt">Lorem</span>
-            </div>
-            <div class="item-slide">
-              <img src="../img/logo.png" />
-              <span class="caption-txt">Lorem</span>
-            </div>
-            <div class="item-slide">
-              <img src="../img/logo.png" />
-              <span class="caption-txt">Lorem</span>
-            </div>
-            <div class="item-slide">
-              <img src="../img/logo.png" />
-              <span class="caption-txt">Lorem</span>
-            </div>
-            <div class="item-slide">
-              <img src="../img/logo.png" />
-              <span class="caption-txt">Lorem</span>
-            </div>
-            <div class="item-slide">
-              <img src="../img/logo.png" />
-              <span class="caption-txt">Lorem</span>
-            </div>
-            <div class="item-slide">
-              <img src="../img/logo.png" />
-              <span class="caption-txt">Lorem</span>
-            </div>
-            <div class="item-slide">
-              <img src="../img/logo.png" />
-              <span class="caption-txt">Lorem</span>
-            </div>
+        <!-- Navbar menu -->
+        <div class="navbar-menu">
+          <!-- Navbar Start -->
+          <div class="navbar-start">
+            <!-- Navbar item -->
           </div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          <button
-            onclick="closeModal()"
-            class="modal-close is-large"
-            aria-label="close"
-          ></button>
+
+          <!-- Navbar end -->
+          <div id="navEnd" class="navbar-end">
+            <!-- Navbar item -->
+            <a class="navbar-item" href="#"> ¿Quienes somos? </a>
+            <!-- Navbar item -->
+            <a href="#" class="navbar-item">¿Qué hacemos?</a>
+            <!-- Navbar item -->
+            <a class="navbar-item" href="#"> Galería </a>
+
+            <a class="navbar-item" href="">|</a>
+
+            <a class="navbar-item" href="">
+              <ion-icon
+                size="large"
+                class="services-icons"
+                name="logo-instagram"
+              ></ion-icon>
+            </a>
+
+            <a class="navbar-item" href="">
+              <ion-icon
+                size="large"
+                class="services-icons"
+                name="logo-facebook"
+              ></ion-icon>
+            </a>
+
+            <a class="navbar-item" href="">
+              <ion-icon
+                size="large"
+                class="services-icons"
+                name="videocam-outline"
+              ></ion-icon>
+            </a>
+
+            <hr
+              style="width: 70%; margin-left: 15%"
+              class="is-hidden-desktop"
+            />
+          </div>
         </div>
       </div>
+    </nav>
+
+    <section class="wrapper">
+      <section class="hero is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h4 class="subtitle is-3 is-uppercase caption-container">
+              Galería
+            </h4>
+            <hr />
+            <div class="columns is-vcentered">
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_1559fe9fdf6e47f1b8a0d5c56a1e6a0b~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04153.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(1)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_ed9a4477e5f3429a84b17134c3e19592~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(2)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_425ab1d3227344ab8fe0123307f92436~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04162.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(3)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <!----
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_1d62cddc867141a3a9534cc62431d706~mv2.jpg/v1/fill/w_363,h_545,al_c,q_80,usm_0.66_1.00_0.01/Modelaje.webp"
+                  />
+                  <div
+                    class="image-overlay size-six"
+                    onclick="openModal();currentSlide(4)"
+                  >
+                    <div class="image-title">Landing</div>
+                  </div>
+                </div>
+              </div>
+            --></div>
+            <div class="columns is-vcentered">
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Molletes%20en%20424%20Kitchen.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(5)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_362ae86c00974741be7adeb043fb6fcb~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/WARHOL%20Sessions.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(6)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_784a70044f664cfea5dc76a5d9c674e2~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04148.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(7)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_016fa63826d94c5887d8207f424579c9~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/La%20Mojiter%C3%ADa%20Del%20Valle.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(8)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="columns is-vcentered">
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_7b1443a177a14148a84887935a7c1980~mv2.png/v1/fill/w_683,h_397,al_c,q_85/Julieta%20Romano%20(Modelaje).webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(9)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_1ee819b43102494a96575666c835b9b1~mv2.jpg/v1/fill/w_898,h_545,al_c,q_85,usm_0.66_1.00_0.01/Liturri%20en%20WARHOL.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(10)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_2cc18e4483e244d78c7837f76b9cd6a5~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04160.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(11)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(12)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="columns is-vcentered">
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(13)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_df3f530a2491426cb09e0c820742fdc7~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Fotograf%C3%ADa%20de%20Productos%20para%20Ventas%20Online.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(14)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_debeba338c44416c9a23543df5a1bb77~mv2_d_4887_2894_s_4_2.jpg/v1/fill/w_920,h_545,al_c,q_85,usm_0.66_1.00_0.01/Mojitos%20_424%20Kitchen_.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(15)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(16)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="columns is-vcentered">
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_8b2009dec5ae4bfa8b3431f068daceff~mv2_d_3968_2976_s_4_2.jpg/v1/fill/w_677,h_508,al_c,q_80,usm_0.66_1.00_0.01/Drone%20CDMX%20Altura_%20200m.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(17)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_25a558fe9d584b24abee8fb1b871a4ef~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%202018.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(18)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_adbffdb6254b4fedad4b4cb548d7c487~mv2.jpg/v1/fill/w_970,h_545,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(19)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(20)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="columns is-vcentered">
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(21)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(22)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <div class="img-card">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_5574c518ceef4a3d9b3d2b1ea8ae78bc~mv2_d_3968_2976_s_4_2.jpg/v1/fill/w_677,h_508,al_c,q_80,usm_0.66_1.00_0.01/Drone%20Edo_Mex_%20Altura_%20150m.webp"
+                  />
+                  <div
+                    class="image-overlay"
+                    onclick="openModal();currentSlide(23)"
+                  >
+                    <div class="image-title">Nombre</div>
+                    <!--<p class="image-description">The description</p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="section">
+          <div class="container is-fluid">
+            <div class="modal-gallery" id="myModal">
+              <div class="modal-content is-vcentered">
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_1559fe9fdf6e47f1b8a0d5c56a1e6a0b~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04153.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_ed9a4477e5f3429a84b17134c3e19592~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_425ab1d3227344ab8fe0123307f92436~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04162.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_1d62cddc867141a3a9534cc62431d706~mv2.jpg/v1/fill/w_363,h_545,al_c,q_80,usm_0.66_1.00_0.01/Modelaje.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Molletes%20en%20424%20Kitchen.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_362ae86c00974741be7adeb043fb6fcb~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/WARHOL%20Sessions.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_784a70044f664cfea5dc76a5d9c674e2~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04148.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_016fa63826d94c5887d8207f424579c9~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/La%20Mojiter%C3%ADa%20Del%20Valle.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_7b1443a177a14148a84887935a7c1980~mv2.png/v1/fill/w_683,h_397,al_c,q_85/Julieta%20Romano%20(Modelaje).webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_1ee819b43102494a96575666c835b9b1~mv2.jpg/v1/fill/w_898,h_545,al_c,q_85,usm_0.66_1.00_0.01/Liturri%20en%20WARHOL.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_2cc18e4483e244d78c7837f76b9cd6a5~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04160.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_df3f530a2491426cb09e0c820742fdc7~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Fotograf%C3%ADa%20de%20Productos%20para%20Ventas%20Online.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_debeba338c44416c9a23543df5a1bb77~mv2_d_4887_2894_s_4_2.jpg/v1/fill/w_920,h_545,al_c,q_85,usm_0.66_1.00_0.01/Mojitos%20_424%20Kitchen_.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_8b2009dec5ae4bfa8b3431f068daceff~mv2_d_3968_2976_s_4_2.jpg/v1/fill/w_677,h_508,al_c,q_80,usm_0.66_1.00_0.01/Drone%20CDMX%20Altura_%20200m.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_25a558fe9d584b24abee8fb1b871a4ef~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%202018.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_adbffdb6254b4fedad4b4cb548d7c487~mv2.jpg/v1/fill/w_970,h_545,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+                <div class="item-slide">
+                  <img
+                    class="showcase-img"
+                    src="https://static.wixstatic.com/media/d27e02_5574c518ceef4a3d9b3d2b1ea8ae78bc~mv2_d_3968_2976_s_4_2.jpg/v1/fill/w_677,h_508,al_c,q_80,usm_0.66_1.00_0.01/Drone%20Edo_Mex_%20Altura_%20150m.webp"
+                  />
+                  <span class="caption-txt">Nombre</span>
+                </div>
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              <button
+                id="closeModal"
+                class="modal-close is-large"
+                aria-label="close"
+              ></button>
+            </div>
+          </div>
+        </section>
+      </section>
     </section>
 
+    <!--Footer-->
+    <footer class="footer-light-medium">
+      <div class="container">
+        <div class="columns is-vcentered footer-body">
+          <!-- Column -->
+          <div class="column is-4">
+            <div class="pt-10 pb-10">
+              <img class="small-footer-logo" src="../img/logo.png" alt="" />
+
+              <div class="footer-description">
+                Somos una empresa dedicada a crear contenido digital que cautive
+                a la comunidad de tu negocio.
+                <br />
+                ¡Acércate a nosotros!
+              </div>
+            </div>
+            <div>
+              <div class="social-links">
+                <a href="#">
+                  <ion-icon
+                    class="footer-icons"
+                    name="logo-whatsapp"
+                  ></ion-icon>
+                </a>
+                <a href="#">
+                  <ion-icon
+                    class="footer-icons"
+                    name="logo-instagram"
+                  ></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Column -->
+          <div class="column is-6 is-offset-2">
+            <div class="columns">
+              <!-- Column -->
+              <div class="column">
+                <ul class="footer-column">
+                  <li class="column-header">Links 1</li>
+                  <li class="column-item"><a href="#">Lorem</a></li>
+                  <li class="column-item">
+                    <a href="#">Lorem</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Column -->
+              <div class="column">
+                <ul class="footer-column">
+                  <li class="column-header">Terms</li>
+                  <li class="column-item"><a href="#">Terms of Service</a></li>
+                  <li class="column-item"><a href="#">Privacy policy</a></li>
+                  <li class="column-item">
+                    Copyright &copy; 2022 Rhetorik&nbsp;
+                    <span id="currentYear"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-copyright has-text-centered">
+          <!--<p>&copy; 2019-2020 | <a href="https://cssninja.io">Css Ninja</a> | All Rights Reserved.</p>-->
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="../js/gallery.js"></script>
   </body>
 </html>

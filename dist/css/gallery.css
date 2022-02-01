@@ -1,7 +1,8 @@
-/*
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css");
 
 body {
   font-family: sans-serif;
+  background-color: black;
 }
 
 h1,
@@ -33,7 +34,7 @@ nav {
   padding-top: 1.25em !important;
 }
 
-
+/* The Modal (background) */
 .modal-gallery {
   display: none;
   position: fixed;
@@ -45,7 +46,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-
+/* Modal Content */
 .modal-content {
   position: relative;
   background-color: rgba(0, 0, 0, 0);
@@ -64,7 +65,7 @@ nav {
   display: none;
 }
 
-
+/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -82,13 +83,13 @@ nav {
   -webkit-user-select: none;
 }
 
-
+/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-
+/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -98,11 +99,11 @@ nav {
   top: 0;
 }
 
-
+/*
 .item-slide img {
   max-width: 1200px;
 }
-
+*/
 
 .caption-container {
   color: white;
@@ -183,6 +184,39 @@ nav {
   margin-top: 5%;
 }
 
+.size-one {
+  aspect-ratio: 800 / 1000;
+}
+.size-two {
+  aspect-ratio: 550 / 800;
+}
+.size-three {
+  aspect-ratio: 700 / 800;
+}
+.size-four {
+  aspect-ratio: 600 / 800;
+}
+.size-five {
+  aspect-ratio: 650 / 800;
+}
+.size-six {
+  aspect-ratio: 900 / 800;
+}
+.size-seven {
+  aspect-ratio: 550 / 800;
+}
+.size-eight {
+  aspect-ratio: 550 / 800;
+}
+.size-nine {
+  aspect-ratio: 1000 / 800;
+}
+/*
+      .item-slide img {
+        max-width: 55%;
+      }
+      */
+
 @media only screen and (max-width: 760px) {
   .item-slide img {
     max-width: 100%;
@@ -198,5 +232,3 @@ nav {
     margin-top: 50%;
   }
 }
-
-*/
