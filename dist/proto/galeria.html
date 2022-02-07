@@ -1,1045 +1,918 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
   <head>
+    <!--- basic page needs
+    ================================================== -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rhetorik - Galería</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    />
-    <link rel="icon" type="image/x-icon" href="" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/gallery.css" />
-    <!--Core CSS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../assets/css/app.css" />
+    <title>Rhetorik</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
-      rel="stylesheet"
-    />
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- favicons
+    ================================================== -->
+    <!----
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    ---->
+
     <style>
-      html {
-        scroll-behavior: smooth;
-        background: black;
-      }
-
-      .navbar {
-        /*min-height: 3.25rem;*/
-        min-height: 5.25rem;
-        background: black;
-      }
-
-      .navbar-wrapper .navbar-brand img {
-        height: 70px !important;
-      }
-
-      p {
-        font-family: "Roboto", sans-serif;
-      }
-
-      .text-white {
-        color: white !important;
-      }
-
-      .text-grey {
-        color: #7a7a7a;
-      }
-
-      .rh-yellow {
-        background: #fa9b05 !important;
-        border: 1px solid #fa9b05;
-      }
-
-      .navbar-wrapper .account-dropdown .dropdown-trigger .button img {
-        display: block;
-        width: 30px;
-        min-width: 30px;
-        height: 30px;
-        min-height: 30px;
-        border-radius: 27%;
-      }
-
-      .spacer {
-        margin-bottom: 80px;
-      }
-
-      .kit-btn {
-        width: 100%;
-      }
-
-      .grid-product {
-        padding: 30px;
-      }
-
-      .grid-products .grid-products-inner .grid-product .grid-product-info h4 {
-        font-family: "Roboto", sans-serif;
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        color: green;
-        font-weight: bold;
-      }
-
-      .grid-products .grid-products-inner .grid-product:hover .buttons .button {
-        background: red;
-        border-color: red;
-        color: #fff;
-        -webkit-box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
-          0 4px 23px 0px rgb(0 0 0 / 12%),
-          0 8px 10px -5px rgb(140 140 249 / 20%) !important;
-        box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
-          0 4px 23px 0px rgb(0 0 0 / 12%),
-          0 8px 10px -5px rgb(140 140 249 / 20%) !important;
-      }
-
-      .listing li {
-        font-size: 20px;
-      }
-
-      .desc-text {
-        font-size: 20px;
-      }
-
-      .menu-ul li {
-        display: inline-block;
-        padding: 10px;
-      }
-
-      .button.is-link {
-        background: #4a90e2 !important;
-        color: white;
-      }
-
-      .button.is-link:hover {
-        background: lightsalmon !important;
-        color: black;
-      }
-
-      .site-blue {
-        background: #4a90e2 !important;
-        color: white;
-        border: none;
-      }
-
-      .site-blue:hover {
-        background: #4a90e2 !important;
-        color: white;
-        border: none;
-      }
-
-      .popular-categories .box.is-category:hover {
-        background: transparent;
-        border: inherit;
-      }
-
-      .popular-categories .box.is-category:hover .left h3,
-      .popular-categories .box.is-category:hover .left p {
-        color: #444f60 !important;
-        -webkit-box-shadow: -1px 3px 15px 0 rgb(0 0 0 / 6%);
-        box-shadow: -1px 3px 15px 0 rgb(0 0 0 / 6%);
-      }
-
-      .modal.is-active .modal-background {
-        background: linear-gradient(45deg, #6a85b6 0%, #4a90e2 100%);
-        background-color: #4a90e2;
-      }
-
-      .vertical-testimonials .vtestimonial-item .vt-content .vt-name {
-        color: black;
-      }
-
-      .flex-card.testimonial-card .testimonial-title,
-      .network-grid .testimonial-card.network-card .testimonial-title,
-      .testimonial-card.project-card .testimonial-title,
-      .testimonial-card.profile-card .testimonial-title,
-      .carousel-wrap
-        .testimonials-solo-carousel
-        .testimonial-card.testimonial-item
-        .testimonial-title {
-        color: black;
-      }
-
-      ::selection {
-        background: #4a90e2; /* WebKit/Blink Browsers */
-      }
-      ::-moz-selection {
-        background: #4a90e2; /* Gecko Browsers */
-      }
-
-      .wrapper {
-        width: 90%;
-        margin-left: 5%;
-      }
-
-      .showcase video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.8;
-      }
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #414a4c;
-        mix-blend-mode: overlay;
-      }
-      .sticky-menu-color {
-        color: white !important;
-        background-color: inherit;
-      }
-      .video-text-header {
-        color: white;
-      }
-
-      .navbar-item,
-      .navbar-link {
-        color: white;
-        font-family: "Anton", sans-serif;
-      }
-
-      .is-clean,
-      .clean-text {
-        font-family: "Anton", sans-serif !important;
-      }
-
-      .navbar-wrapper .navbar-item {
-        font-family: "Anton", sans-serif;
-      }
-
-      .navbar-wrapper.navbar-faded {
-        background: #000;
-        -webkit-box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
-        box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
-      }
-
-      .navbar-item img {
-        max-height: 100%;
-      }
-
-      .footer-light-medium .footer-body .small-footer-logo {
-        height: 85px;
-      }
-
-      .footer-light-medium {
-        padding-bottom: 5rem !important;
-        padding-top: 4rem !important;
-        background: #000;
-      }
-
-      .footer-light-medium .footer-body .footer-description {
-        color: #999;
-        padding: 10px 0;
-        font-size: 15px;
-      }
-
-      .footer-light-medium .footer-body .social-links a {
-        color: #999;
-        margin: 0 5px;
-      }
-
-      .footer-light-medium .footer-body .footer-column .column-item {
-        padding-bottom: 10px;
-        font-size: 0.9em;
-      }
-
-      .footer-light-medium .footer-body .footer-column .column-header {
-        color: #606060;
-      }
-
-      .footer-light-medium .footer-body .footer-column .column-item a {
-        color: #999;
-        font-size: 0.9em;
-      }
-
-      .footer-light-medium .footer-body .footer-column .column-header {
-        font-family: "Nexa Light", sans-serif;
-        text-transform: uppercase;
-        color: #444f60;
-        font-size: 1rem;
-        font-weight: 700;
-        margin: 10px 0;
-      }
-
-      .footer-light-medium .footer-body .footer-column .column-header {
-        color: #606060;
-      }
-
-      .footer-icons {
-        height: 20px;
-        width: 20px;
-      }
-
-      a:hover {
-        color: white !important;
-      }
-
-      .is-pricing-card .pricing-icon {
-        background: #0e1111;
-      }
-
-      .services-icons {
-        color: white;
-      }
-
-      .iframe-container {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-        border-radius: 5px;
-      }
-
-      /* Then style the iframe to fit in the container div with full height and width */
-      .responsive-iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .services-not {
-        height: 400px;
-        border-radius: 14px;
-      }
-
-      .gallery-imgs img {
-        cursor: pointer;
-      }
-
-      .footer-light-medium .footer-body .footer-description {
-        color: #999;
-        padding: 10px 0;
-      }
-
-      @media only screen and (max-width: 600px) {
-        .mobile-wrapper {
-          width: 90%;
-          margin-left: 5%;
-        }
+      .text-display-title-2 {
+        --text-display-title-size: 3.6rem;
+        --text-multiplier: 1;
+        font-family: var(--font-2);
+        font-size: calc(
+          var(--text-display-title-size) * var(--text-multiplier)
+        );
+        font-weight: 600;
+        line-height: 1.2857;
+        margin-top: 0;
       }
     </style>
-    <script src="https://use.fontawesome.com/cf546031f8.js"></script>
   </head>
-  <body>
-    <nav
-      class="navbar navbar-wrapper navbar-default navbar-fade is-fixed-top is-transparent"
-    >
-      <div class="container">
-        <!-- Brand -->
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <img class="switcher-logo" src="../img/logo.png" alt="" />
-          </a>
 
-          <!-- Responsive toggle -->
-          <div class="custom-burger" data-target="">
-            <a id="" class="responsive-btn" href="javascript:void(0);">
-              <span class="menu-toggle">
-                <span class="icon-box-toggle">
-                  <span class="rotate">
-                    <i class="icon-line-top"></i>
-                    <i class="icon-line-center"></i>
-                    <i class="icon-line-bottom"></i>
-                  </span>
-                </span>
-              </span>
+  <body id="top">
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
+
+    <!-- page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
+      <!-- # site header 
+        ================================================== -->
+      <header class="s-header">
+        <div class="s-header__block">
+          <div class="s-header__logo">
+            <a class="logo" href="index.html">
+              <img src="../img/logo.png" alt="Homepage" />
             </a>
           </div>
-          <!-- /Responsive toggle -->
+
+          <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
         </div>
+        <!-- end s-header__block -->
 
-        <!-- Navbar menu -->
-        <div class="navbar-menu">
-          <!-- Navbar Start -->
-          <div class="navbar-start">
-            <!-- Navbar item -->
-          </div>
+        <div class="row s-header__nav-wrap">
+          <nav class="s-header__nav">
+            <ul>
+              <li class="current">
+                <a href="index.html#intro" class="smoothscroll">Intro</a>
+              </li>
+              <li>
+                <a href="index.html#services" class="smoothscroll"
+                  >¿Qué hacemos?</a
+                >
+              </li>
+              <!--<li><a href="#works" class="smoothscroll">Our Works</a></li>-->
+              <li>
+                <a href="index.html#contact" class="smoothscroll">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="s-header__social">
+            <li>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+                >
+                  <path
+                    d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+                >
+                  <path
+                    d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+                >
+                  <path
+                    d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"
+                  ></path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path
+                    d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+                >
+                  <path
+                    d="M20.66,6.98c-0.894-1.533-2.107-2.747-3.641-3.64C15.486,2.447,13.813,2,12,2S8.514,2.447,6.98,3.34 C5.447,4.233,4.233,5.447,3.34,6.98S2,10.187,2,12s0.446,3.487,1.34,5.02c0.894,1.534,2.107,2.747,3.641,3.64 C8.514,21.553,10.187,22,12,22s3.486-0.447,5.02-1.34c1.533-0.893,2.747-2.106,3.641-3.64C21.554,15.487,22,13.813,22,12 S21.554,8.513,20.66,6.98z M12,3.66c2,0,3.772,0.64,5.32,1.919c-0.92,1.174-2.286,2.14-4.1,2.9c-1.002-1.813-2.088-3.327-3.261-4.54 C10.641,3.753,11.319,3.66,12,3.66z M5.51,6.8c0.754-0.947,1.656-1.686,2.711-2.22c1.212,1.201,2.325,2.7,3.34,4.5 c-2,0.6-4.114,0.9-6.341,0.9c-0.573,0-1.006-0.013-1.3-0.04C4.227,8.793,4.757,7.747,5.51,6.8z M3.66,12 c0-0.054,0.003-0.12,0.01-0.2c0.007-0.08,0.01-0.146,0.01-0.2c0.254,0.014,0.641,0.02,1.161,0.02c2.666,0,5.146-0.367,7.439-1.1 c0.187,0.373,0.381,0.793,0.58,1.26c-1.32,0.293-2.674,1.006-4.061,2.14S6.4,16.247,5.76,17.5C4.36,15.913,3.66,14.08,3.66,12z M12,20.34c-1.894,0-3.594-0.587-5.101-1.759C7.5,17.394,8.423,16.259,9.67,15.18c1.246-1.08,2.483-1.753,3.71-2.02 c0.772,2.133,1.293,4.339,1.56,6.62C13.966,20.153,12.986,20.34,12,20.34z M19.08,16.38c-0.666,1.066-1.526,1.94-2.58,2.621 c-0.24-2.08-0.7-4.107-1.379-6.081c0.932-0.066,1.765-0.1,2.5-0.1c0.799,0,1.686,0.034,2.659,0.1 C20.146,14.16,19.746,15.313,19.08,16.38z M17.84,11.38c-1.16,0-2.233,0.047-3.22,0.14c-0.254-0.653-0.48-1.193-0.68-1.62 c2.066-0.906,3.532-2.006,4.399-3.3c1.2,1.414,1.854,3.027,1.96,4.84C19.487,11.4,18.667,11.38,17.84,11.38z"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">Dribbble</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end s-header__nav-wrap -->
+      </header>
+      <!-- end s-header -->
 
-          <!-- Navbar end -->
-          <div id="navEnd" class="navbar-end">
-            <!-- Navbar item -->
-            <a class="navbar-item" href="#"> ¿Quienes somos? </a>
-            <!-- Navbar item -->
-            <a href="#" class="navbar-item">¿Qué hacemos?</a>
-            <!-- Navbar item -->
-            <a class="navbar-item" href="#"> Galería </a>
-
-            <a class="navbar-item" href="">|</a>
-
-            <a class="navbar-item" href="">
-              <ion-icon
-                size="large"
-                class="services-icons"
-                name="logo-instagram"
-              ></ion-icon>
-            </a>
-
-            <a class="navbar-item" href="">
-              <ion-icon
-                size="large"
-                class="services-icons"
-                name="logo-facebook"
-              ></ion-icon>
-            </a>
-
-            <a class="navbar-item" href="">
-              <ion-icon
-                size="large"
-                class="services-icons"
-                name="videocam-outline"
-              ></ion-icon>
-            </a>
-
-            <hr
-              style="width: 70%; margin-left: 15%"
-              class="is-hidden-desktop"
-            />
+      <!-- ## Photoworks
+        ================================================== -->
+      <section id="works" class="s-works target-section">
+        <div class="row section-header section-header--dark has-bottom-sep">
+          <div class="column lg-12">
+            <h3 style="color: lightgray" class="text-pretitle">Galería</h3>
+            <h1 class="text-display-title-2">Descripción de galería</h1>
           </div>
         </div>
-      </div>
-    </nav>
+        <!-- end section-header -->
 
-    <section class="wrapper">
-      <section class="hero is-medium">
-        <div class="hero-body">
-          <div class="container">
-            <h4 class="subtitle is-3 is-uppercase caption-container">
-              Galería
-            </h4>
-            <hr />
-            <div class="columns is-vcentered">
-              <div class="column">
-                <div class="img-card">
+        <div
+          class="row folio-list block-lg-one-third block-tab-one-half block-stack-on-550 collapse"
+          data-animate-block
+        >
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_1559fe9fdf6e47f1b8a0d5c56a1e6a0b~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04153.webp"
+                  title="The Red Wheel"
+                  data-size="1050x700"
+                >
                   <img
-                    class="showcase-img"
                     src="https://static.wixstatic.com/media/d27e02_1559fe9fdf6e47f1b8a0d5c56a1e6a0b~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04153.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_1559fe9fdf6e47f1b8a0d5c56a1e6a0b~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04153.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_1559fe9fdf6e47f1b8a0d5c56a1e6a0b~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04153.webp 2x
+                    "
+                    alt=""
                   />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(1)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
+                </a>
               </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_ed9a4477e5f3429a84b17134c3e19592~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(2)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
               </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_425ab1d3227344ab8fe0123307f92436~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04162.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(3)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <!----
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_1d62cddc867141a3a9534cc62431d706~mv2.jpg/v1/fill/w_363,h_545,al_c,q_80,usm_0.66_1.00_0.01/Modelaje.webp"
-                  />
-                  <div
-                    class="image-overlay size-six"
-                    onclick="openModal();currentSlide(4)"
-                  >
-                    <div class="image-title">Landing</div>
-                  </div>
-                </div>
-              </div>
-            --></div>
-            <div class="columns is-vcentered">
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Molletes%20en%20424%20Kitchen.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(5)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_362ae86c00974741be7adeb043fb6fcb~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/WARHOL%20Sessions.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(6)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_784a70044f664cfea5dc76a5d9c674e2~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04148.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(7)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_016fa63826d94c5887d8207f424579c9~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/La%20Mojiter%C3%ADa%20Del%20Valle.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(8)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="columns is-vcentered">
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_7b1443a177a14148a84887935a7c1980~mv2.png/v1/fill/w_683,h_397,al_c,q_85/Julieta%20Romano%20(Modelaje).webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(9)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_1ee819b43102494a96575666c835b9b1~mv2.jpg/v1/fill/w_898,h_545,al_c,q_85,usm_0.66_1.00_0.01/Liturri%20en%20WARHOL.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(10)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_2cc18e4483e244d78c7837f76b9cd6a5~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04160.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(11)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(12)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="columns is-vcentered">
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(13)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_df3f530a2491426cb09e0c820742fdc7~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Fotograf%C3%ADa%20de%20Productos%20para%20Ventas%20Online.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(14)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_debeba338c44416c9a23543df5a1bb77~mv2_d_4887_2894_s_4_2.jpg/v1/fill/w_920,h_545,al_c,q_85,usm_0.66_1.00_0.01/Mojitos%20_424%20Kitchen_.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(15)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(16)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="columns is-vcentered">
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_8b2009dec5ae4bfa8b3431f068daceff~mv2_d_3968_2976_s_4_2.jpg/v1/fill/w_677,h_508,al_c,q_80,usm_0.66_1.00_0.01/Drone%20CDMX%20Altura_%20200m.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(17)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_25a558fe9d584b24abee8fb1b871a4ef~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%202018.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(18)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_adbffdb6254b4fedad4b4cb548d7c487~mv2.jpg/v1/fill/w_970,h_545,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(19)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(20)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="columns is-vcentered">
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(21)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(22)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
-              </div>
-              <div class="column">
-                <div class="img-card">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_5574c518ceef4a3d9b3d2b1ea8ae78bc~mv2_d_3968_2976_s_4_2.jpg/v1/fill/w_677,h_508,al_c,q_80,usm_0.66_1.00_0.01/Drone%20Edo_Mex_%20Altura_%20150m.webp"
-                  />
-                  <div
-                    class="image-overlay"
-                    onclick="openModal();currentSlide(23)"
-                  >
-                    <div class="image-title">Nombre</div>
-                    <!--<p class="image-description">The description</p>-->
-                  </div>
-                </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
               </div>
             </div>
           </div>
+          <!-- end column 1 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_784a70044f664cfea5dc76a5d9c674e2~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04148.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_784a70044f664cfea5dc76a5d9c674e2~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04148.webpg"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_784a70044f664cfea5dc76a5d9c674e2~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04148.webpg 1x,
+                      https://static.wixstatic.com/media/d27e02_784a70044f664cfea5dc76a5d9c674e2~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04148.webp  2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 2 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_425ab1d3227344ab8fe0123307f92436~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04162.webp"
+                  title="OI Logo"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_425ab1d3227344ab8fe0123307f92436~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04162.webpg"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_425ab1d3227344ab8fe0123307f92436~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04162.webpg 1x,
+                      https://static.wixstatic.com/media/d27e02_425ab1d3227344ab8fe0123307f92436~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04162.webp  2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Product Design</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 3 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Molletes%20en%20424%20Kitchen.webp"
+                  title="Corrugated Sheets"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Molletes%20en%20424%20Kitchen.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Molletes%20en%20424%20Kitchen.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Molletes%20en%20424%20Kitchen.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 4 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_362ae86c00974741be7adeb043fb6fcb~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/WARHOL%20Sessions.webp"
+                  title="Sand Dunes"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_362ae86c00974741be7adeb043fb6fcb~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/WARHOL%20Sessions.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_362ae86c00974741be7adeb043fb6fcb~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/WARHOL%20Sessions.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_362ae86c00974741be7adeb043fb6fcb~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/WARHOL%20Sessions.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">E-Commerce</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_ed9a4477e5f3429a84b17134c3e19592~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
+                  title="Music Life"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_ed9a4477e5f3429a84b17134c3e19592~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_ed9a4477e5f3429a84b17134c3e19592~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_ed9a4477e5f3429a84b17134c3e19592~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Product Design</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 5 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_016fa63826d94c5887d8207f424579c9~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/La%20Mojiter%C3%ADa%20Del%20Valle.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_016fa63826d94c5887d8207f424579c9~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/La%20Mojiter%C3%ADa%20Del%20Valle.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_016fa63826d94c5887d8207f424579c9~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/La%20Mojiter%C3%ADa%20Del%20Valle.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_016fa63826d94c5887d8207f424579c9~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/La%20Mojiter%C3%ADa%20Del%20Valle.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 6 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 7 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 8 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_2cc18e4483e244d78c7837f76b9cd6a5~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04160.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_2cc18e4483e244d78c7837f76b9cd6a5~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04160.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_2cc18e4483e244d78c7837f76b9cd6a5~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04160.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_2cc18e4483e244d78c7837f76b9cd6a5~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04160.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 9 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 10 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 11 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_7b1443a177a14148a84887935a7c1980~mv2.png/v1/fill/w_683,h_397,al_c,q_85/Julieta%20Romano%20(Modelaje).webp"
+                  title="The Red Wheel"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_7b1443a177a14148a84887935a7c1980~mv2.png/v1/fill/w_683,h_397,al_c,q_85/Julieta%20Romano%20(Modelaje).webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_7b1443a177a14148a84887935a7c1980~mv2.png/v1/fill/w_683,h_397,al_c,q_85/Julieta%20Romano%20(Modelaje).webp 1x,
+                      https://static.wixstatic.com/media/d27e02_7b1443a177a14148a84887935a7c1980~mv2.png/v1/fill/w_683,h_397,al_c,q_85/Julieta%20Romano%20(Modelaje).webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 12 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_debeba338c44416c9a23543df5a1bb77~mv2_d_4887_2894_s_4_2.jpg/v1/fill/w_920,h_545,al_c,q_85,usm_0.66_1.00_0.01/Mojitos%20_424%20Kitchen_.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_debeba338c44416c9a23543df5a1bb77~mv2_d_4887_2894_s_4_2.jpg/v1/fill/w_920,h_545,al_c,q_85,usm_0.66_1.00_0.01/Mojitos%20_424%20Kitchen_.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_debeba338c44416c9a23543df5a1bb77~mv2_d_4887_2894_s_4_2.jpg/v1/fill/w_920,h_545,al_c,q_85,usm_0.66_1.00_0.01/Mojitos%20_424%20Kitchen_.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_debeba338c44416c9a23543df5a1bb77~mv2_d_4887_2894_s_4_2.jpg/v1/fill/w_920,h_545,al_c,q_85,usm_0.66_1.00_0.01/Mojitos%20_424%20Kitchen_.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 13 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 14 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_1ee819b43102494a96575666c835b9b1~mv2.jpg/v1/fill/w_898,h_545,al_c,q_85,usm_0.66_1.00_0.01/Liturri%20en%20WARHOL.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_1ee819b43102494a96575666c835b9b1~mv2.jpg/v1/fill/w_898,h_545,al_c,q_85,usm_0.66_1.00_0.01/Liturri%20en%20WARHOL.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_1ee819b43102494a96575666c835b9b1~mv2.jpg/v1/fill/w_898,h_545,al_c,q_85,usm_0.66_1.00_0.01/Liturri%20en%20WARHOL.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_1ee819b43102494a96575666c835b9b1~mv2.jpg/v1/fill/w_898,h_545,al_c,q_85,usm_0.66_1.00_0.01/Liturri%20en%20WARHOL.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 15 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_25a558fe9d584b24abee8fb1b871a4ef~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%202018.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_25a558fe9d584b24abee8fb1b871a4ef~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%202018.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_25a558fe9d584b24abee8fb1b871a4ef~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%202018.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_25a558fe9d584b24abee8fb1b871a4ef~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%202018.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 16 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_adbffdb6254b4fedad4b4cb548d7c487~mv2.jpg/v1/fill/w_970,h_545,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_adbffdb6254b4fedad4b4cb548d7c487~mv2.jpg/v1/fill/w_970,h_545,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_adbffdb6254b4fedad4b4cb548d7c487~mv2.jpg/v1/fill/w_970,h_545,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_adbffdb6254b4fedad4b4cb548d7c487~mv2.jpg/v1/fill/w_970,h_545,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 17 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 18 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 19 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp"
+                  title="The Lamp"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 20 -->
         </div>
-
-        <section class="section">
-          <div class="container is-fluid">
-            <div class="modal-gallery" id="myModal">
-              <div class="modal-content is-vcentered">
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_1559fe9fdf6e47f1b8a0d5c56a1e6a0b~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04153.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_ed9a4477e5f3429a84b17134c3e19592~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_425ab1d3227344ab8fe0123307f92436~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04162.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_1d62cddc867141a3a9534cc62431d706~mv2.jpg/v1/fill/w_363,h_545,al_c,q_80,usm_0.66_1.00_0.01/Modelaje.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Molletes%20en%20424%20Kitchen.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_362ae86c00974741be7adeb043fb6fcb~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/WARHOL%20Sessions.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_784a70044f664cfea5dc76a5d9c674e2~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04148.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_016fa63826d94c5887d8207f424579c9~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/La%20Mojiter%C3%ADa%20Del%20Valle.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_7b1443a177a14148a84887935a7c1980~mv2.png/v1/fill/w_683,h_397,al_c,q_85/Julieta%20Romano%20(Modelaje).webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_1ee819b43102494a96575666c835b9b1~mv2.jpg/v1/fill/w_898,h_545,al_c,q_85,usm_0.66_1.00_0.01/Liturri%20en%20WARHOL.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_2cc18e4483e244d78c7837f76b9cd6a5~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04160.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_c3c4fff87fc147508548494851e8bb9a~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Hawaiana%20_La%20Caba%C3%B1a%20de%20los%20Primos_.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_df3f530a2491426cb09e0c820742fdc7~mv2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Fotograf%C3%ADa%20de%20Productos%20para%20Ventas%20Online.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_debeba338c44416c9a23543df5a1bb77~mv2_d_4887_2894_s_4_2.jpg/v1/fill/w_920,h_545,al_c,q_85,usm_0.66_1.00_0.01/Mojitos%20_424%20Kitchen_.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_c323a0497f774bb596b0254f9755903d~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_818,h_545,al_c,q_85,usm_0.66_1.00_0.01/Hamburguesa%20Ma%C3%B1anera%20_424%20Kitchen_.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_8b2009dec5ae4bfa8b3431f068daceff~mv2_d_3968_2976_s_4_2.jpg/v1/fill/w_677,h_508,al_c,q_80,usm_0.66_1.00_0.01/Drone%20CDMX%20Altura_%20200m.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_25a558fe9d584b24abee8fb1b871a4ef~mv2.jpg/v1/fill/w_762,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%202018.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_adbffdb6254b4fedad4b4cb548d7c487~mv2.jpg/v1/fill/w_970,h_545,al_c,q_85,usm_0.66_1.00_0.01/BlackBar%20Sessions.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-                <div class="item-slide">
-                  <img
-                    class="showcase-img"
-                    src="https://static.wixstatic.com/media/d27e02_5574c518ceef4a3d9b3d2b1ea8ae78bc~mv2_d_3968_2976_s_4_2.jpg/v1/fill/w_677,h_508,al_c,q_80,usm_0.66_1.00_0.01/Drone%20Edo_Mex_%20Altura_%20150m.webp"
-                  />
-                  <span class="caption-txt">Nombre</span>
-                </div>
-              </div>
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-              <button
-                id="closeModal"
-                class="modal-close is-large"
-                aria-label="close"
-              ></button>
-            </div>
-          </div>
-        </section>
+        <!-- folio-list -->
       </section>
-    </section>
+      <!-- end s-works -->
+    </div>
+    <!-- end -s-pagewrap -->
 
-    <!--Footer-->
-    <footer class="footer-light-medium">
-      <div class="container">
-        <div class="columns is-vcentered footer-body">
-          <!-- Column -->
-          <div class="column is-4">
-            <div class="pt-10 pb-10">
-              <img class="small-footer-logo" src="../img/logo.png" alt="" />
-
-              <div class="footer-description">
-                Somos una empresa dedicada a crear contenido digital que cautive
-                a la comunidad de tu negocio.
-                <br />
-                ¡Acércate a nosotros!
-              </div>
-            </div>
-            <div>
-              <div class="social-links">
-                <a href="#">
-                  <ion-icon
-                    class="footer-icons"
-                    name="logo-whatsapp"
-                  ></ion-icon>
-                </a>
-                <a href="#">
-                  <ion-icon
-                    class="footer-icons"
-                    name="logo-instagram"
-                  ></ion-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Column -->
-          <div class="column is-6 is-offset-2">
-            <div class="columns">
-              <!-- Column -->
-              <div class="column">
-                <ul class="footer-column">
-                  <li class="column-header">Links 1</li>
-                  <li class="column-item"><a href="#">Lorem</a></li>
-                  <li class="column-item">
-                    <a href="#">Lorem</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- Column -->
-              <div class="column">
-                <ul class="footer-column">
-                  <li class="column-header">Terms</li>
-                  <li class="column-item"><a href="#">Terms of Service</a></li>
-                  <li class="column-item"><a href="#">Privacy policy</a></li>
-                  <li class="column-item">
-                    Copyright &copy; 2022 Rhetorik&nbsp;
-                    <span id="currentYear"></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
         </div>
 
-        <div class="footer-copyright has-text-centered">
-          <!--<p>&copy; 2019-2020 | <a href="https://cssninja.io">Css Ninja</a> | All Rights Reserved.</p>-->
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button
+              class="pswp__button pswp__button--close"
+              title="Close (Esc)"
+            ></button>
+            <button
+              class="pswp__button pswp__button--share"
+              title="Share"
+            ></button>
+            <button
+              class="pswp__button pswp__button--fs"
+              title="Toggle fullscreen"
+            ></button>
+            <button
+              class="pswp__button pswp__button--zoom"
+              title="Zoom in/out"
+            ></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button
+            class="pswp__button pswp__button--arrow--left"
+            title="Previous (arrow left)"
+          ></button>
+          <button
+            class="pswp__button pswp__button--arrow--right"
+            title="Next (arrow right)"
+          ></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
+    <!-- end photoSwipe background -->
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="../js/gallery.js"></script>
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
