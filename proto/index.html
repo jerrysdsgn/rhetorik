@@ -1,293 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
-    <!-- Required Meta Tags -->
+    <!--- basic page needs
+    ================================================== -->
     <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="Find the best leggings for your body type. "
-    />
-    <meta name="keywords" content="tiktok leggings" />
-    <meta name="author" content="AWLeggings" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rhetorik</title>
 
-    <title>Rhetorik - Proto</title>
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
 
-    <!--Core CSS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../assets/css/app.css" />
-    <link rel="stylesheet" href="../assets/css/core.css" />
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
-      rel="stylesheet"
-    />
+    <!-- favicons
+    ================================================== -->
+    <!----
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    ---->
 
     <style>
-      *::selection {
-        background: #000 !important;
-        color: #fff !important;
+      .text-display-title-2 {
+        --text-display-title-size: 3.6rem;
+        --text-multiplier: 1;
+        font-family: var(--font-2);
+        font-size: calc(
+          var(--text-display-title-size) * var(--text-multiplier)
+        );
+        font-weight: 600;
+        line-height: 1.2857;
+        margin-top: 0;
       }
-
-      html {
-        scroll-behavior: smooth;
-        background: black;
-      }
-
-      .navbar {
-        /*min-height: 3.25rem;*/
-        min-height: 5.25rem;
-      }
-
-      .navbar-wrapper .navbar-brand img {
-        height: 70px !important;
-      }
-
-      p {
-        font-family: "Roboto", sans-serif;
-      }
-
-      .text-white {
-        color: white !important;
-      }
-
-      .text-grey {
-        color: #7a7a7a;
-      }
-
-      .rh-yellow {
-        background: #fa9b05 !important;
-        border: 1px solid #fa9b05;
-      }
-
-      .navbar-wrapper .account-dropdown .dropdown-trigger .button img {
-        display: block;
-        width: 30px;
-        min-width: 30px;
-        height: 30px;
-        min-height: 30px;
-        border-radius: 27%;
-      }
-
-      .spacer {
-        margin-bottom: 80px;
-      }
-
-      .kit-btn {
-        width: 100%;
-      }
-
-      .grid-product {
-        padding: 30px;
-      }
-
-      .grid-products .grid-products-inner .grid-product .grid-product-info h4 {
-        font-family: "Roboto", sans-serif;
-        font-size: 0.8rem;
+      .header-text {
+        font-family: var(--font-2);
+        font-size: var(--text-sm);
+        font-weight: 600;
+        color: var(--color-body);
         text-transform: uppercase;
-        color: green;
-        font-weight: bold;
+        letter-spacing: 0.3em;
       }
-
-      .grid-products .grid-products-inner .grid-product:hover .buttons .button {
-        background: red;
-        border-color: red;
-        color: #fff;
-        -webkit-box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
-          0 4px 23px 0px rgb(0 0 0 / 12%),
-          0 8px 10px -5px rgb(140 140 249 / 20%) !important;
-        box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
-          0 4px 23px 0px rgb(0 0 0 / 12%),
-          0 8px 10px -5px rgb(140 140 249 / 20%) !important;
-      }
-
-      .listing li {
-        font-size: 20px;
-      }
-
-      .desc-text {
-        font-size: 20px;
-      }
-
-      .menu-ul li {
-        display: inline-block;
-        padding: 10px;
-      }
-
-      .button.is-link {
-        background: #4a90e2 !important;
-        color: white;
-      }
-
-      .button.is-link:hover {
-        background: lightsalmon !important;
-        color: black;
-      }
-
-      .site-blue {
-        background: #4a90e2 !important;
-        color: white;
-        border: none;
-      }
-
-      .site-blue:hover {
-        background: #4a90e2 !important;
-        color: white;
-        border: none;
-      }
-
-      .popular-categories .box.is-category:hover {
-        background: transparent;
-        border: inherit;
-      }
-
-      .popular-categories .box.is-category:hover .left h3,
-      .popular-categories .box.is-category:hover .left p {
-        color: #444f60 !important;
-        -webkit-box-shadow: -1px 3px 15px 0 rgb(0 0 0 / 6%);
-        box-shadow: -1px 3px 15px 0 rgb(0 0 0 / 6%);
-      }
-
-      .modal.is-active .modal-background {
-        background: linear-gradient(45deg, #6a85b6 0%, #4a90e2 100%);
-        background-color: #4a90e2;
-      }
-
-      .vertical-testimonials .vtestimonial-item .vt-content .vt-name {
-        color: black;
-      }
-
-      .flex-card.testimonial-card .testimonial-title,
-      .network-grid .testimonial-card.network-card .testimonial-title,
-      .testimonial-card.project-card .testimonial-title,
-      .testimonial-card.profile-card .testimonial-title,
-      .carousel-wrap
-        .testimonials-solo-carousel
-        .testimonial-card.testimonial-item
-        .testimonial-title {
-        color: black;
-      }
-
-      ::selection {
-        background: #4a90e2; /* WebKit/Blink Browsers */
-      }
-      ::-moz-selection {
-        background: #4a90e2; /* Gecko Browsers */
-      }
-
-      .wrapper {
-        width: 90%;
-        margin-left: 5%;
-      }
-
-      .showcase video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.8;
-      }
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #414a4c;
-        mix-blend-mode: overlay;
-      }
-      .sticky-menu-color {
-        color: white !important;
-        background-color: inherit;
-      }
-      .video-text-header {
-        color: white;
-      }
-
-      .navbar-item,
-      .navbar-link {
-        color: white;
-        font-family: "Anton", sans-serif;
-      }
-
-      .is-clean,
-      .clean-text {
-        font-family: "Anton", sans-serif !important;
-      }
-
-      .navbar-wrapper .navbar-item {
-        font-family: "Anton", sans-serif;
-      }
-
-      .navbar-wrapper.navbar-faded {
-        background: #000;
-        -webkit-box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
-        box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
-      }
-
-      .navbar-item img {
-        max-height: 100%;
-      }
-
-      .section-wrap .section.image-section {
-        background: #000;
-      }
-
-      .section-wrap .section.image-section .title,
-      .section-wrap .section.image-section .subtitle,
-      .section-wrap .section.image-section p {
-        color: #444f60;
-      }
-
-      .footer-light-medium .footer-body .small-footer-logo {
-        height: 85px;
-      }
-
-      .footer-light-medium {
-        padding-bottom: 0 !important;
-        padding-top: 4rem !important;
-        background: #000;
-      }
-
-      .footer-light-medium .footer-body .footer-column .column-header {
-        color: #606060;
-      }
-
-      .footer-icons {
-        height: 20px;
-        width: 20px;
-      }
-
-      a:hover {
-        color: white !important;
-      }
-
-      .is-pricing-card .pricing-icon {
-        background: #0e1111;
-      }
-
-      .services-icons {
-        color: white;
-      }
-
-      .iframe-container {
+      .video-container {
         position: relative;
         overflow: hidden;
         width: 100%;
-        padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-        border-radius: 5px;
+        padding-top: 0; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
       }
 
       /* Then style the iframe to fit in the container div with full height and width */
@@ -300,350 +63,302 @@
         width: 100%;
         height: 100%;
       }
-
-      .services-not {
-        height: 400px;
-        border-radius: 14px;
+      .folio-item:hover .folio-item__project-link {
+        color: white;
       }
-
-      .gallery-imgs img {
-        cursor: pointer;
-      }
-
-      .spacer {
-        margin-bottom: 120px;
-      }
-
-      .section .feature-headline {
-        color: #fff !important;
-      }
-
-      .navigation-tabs.outlined-pills .tabs ul li.is-active a {
-        color: #fff;
-        color: #fff;
-        border: 1px solid #fff;
-      }
-
-      .navigation-tabs.outlined-pills .tabs ul li.is-active a:hover {
-        color: #fff;
-        color: #fff;
-        border: 1px solid #fff;
-      }
-
-      .section-wrap
-        .section.image-section
-        .support-features
-        .support-card:hover {
-        background: #19202b;
-        border: 1px solid #212a38;
-      }
-
-      .section-wrap .section.image-section {
-        padding-left: 5%;
-      }
-
-      @media only screen and (max-width: 600px) {
-        .mobile-wrapper {
-          width: 90%;
-          margin-left: 5%;
-        }
+      html {
+        scroll-behavior: smooth;
       }
     </style>
   </head>
 
-  <body onload="contents()">
-    <section class="hero is-fullheight showcase">
-      <nav
-        class="navbar navbar-wrapper navbar-default navbar-fade is-fixed-top is-transparent"
-      >
-        <div class="container">
-          <!-- Brand -->
-          <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-              <img class="switcher-logo" src="../img/logo.png" alt="" />
-            </a>
-
-            <!-- Responsive toggle -->
-            <div class="custom-burger" data-target="">
-              <a id="" class="responsive-btn" href="javascript:void(0);">
-                <span class="menu-toggle">
-                  <span class="icon-box-toggle">
-                    <span class="rotate">
-                      <i class="icon-line-top"></i>
-                      <i class="icon-line-center"></i>
-                      <i class="icon-line-bottom"></i>
-                    </span>
-                  </span>
-                </span>
-              </a>
-            </div>
-            <!-- /Responsive toggle -->
-          </div>
-
-          <!-- Navbar menu -->
-          <div class="navbar-menu">
-            <!-- Navbar Start -->
-            <div class="navbar-start">
-              <!-- Navbar item -->
-            </div>
-
-            <!-- Navbar end -->
-            <div id="navEnd" class="navbar-end">
-              <!-- Navbar item -->
-              <a class="navbar-item" href="#"> ¿Quienes somos? </a>
-              <!-- Navbar item -->
-              <a href="#" class="navbar-item">¿Qué hacemos?</a>
-              <!-- Navbar item -->
-              <a class="navbar-item" href="#"> Galería </a>
-
-              <a class="navbar-item" href="">|</a>
-
-              <a class="navbar-item" href="">
-                <ion-icon
-                  size="large"
-                  class="services-icons"
-                  name="logo-instagram"
-                ></ion-icon>
-              </a>
-
-              <a class="navbar-item" href="">
-                <ion-icon
-                  size="large"
-                  class="services-icons"
-                  name="logo-facebook"
-                ></ion-icon>
-              </a>
-
-              <a class="navbar-item" href="">
-                <ion-icon
-                  size="large"
-                  class="services-icons"
-                  name="videocam-outline"
-                ></ion-icon>
-              </a>
-
-              <hr
-                style="width: 70%; margin-left: 15%"
-                class="is-hidden-desktop"
-              />
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <video src="../video/trimmed.mp4" muted loop autoplay></video>
-      <div class="overlay"></div>
-      <div class="hero-body">
-        <div class="wrapper">
-          <p class="title is-1 video-text-header">Rhetorik Digital Media</p>
-          <p class="subtitle is-4 video-text-header">
-            Soluciones integrales para tu negocio
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!--HERO [WHAT: PROPUESTA DE VALOR]-->
-    <section class="hero is-fullheight initial-message">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-vcentered">
-            <div style="margin-top: -4rem" class="column is-8 is-offset-2">
-              <h1 class="title is-1 text-white">
-                Creamos contenido que te ayude a atraer, mantener, crecer y
-                posicionarte en tu mercado objetivo.
-              </h1>
-              <br />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product -->
-    <div id="product" class="section is-medium">
-      <div class="container">
-        <div class="content-wrapper">
-          <div class="service-box has-text-centered">
-            <h2 class="service-title text-white">¿QUÉ HACEMOS?</h2>
-            <br />
-            <p class="text-grey desc-text">
-              Sabemos lo importante que es para ti la estabilidad y crecimiento
-              de tu negocio.
-            </p>
-            <p class="text-grey desc-text">
-              Ofrecemos un conjunto de servicios que ...
-            </p>
-          </div>
-          <br />
-          <br />
-          <br />
-          <div class="columns is-vcentered">
-            <!-- Content -->
-            <div class="column is-4">
-              <!-- Icon block -->
-              <div class="column">
-                <div class="agency-icon-box">
-                  <div class="is-icon-reveal">
-                    <ion-icon
-                      size="large"
-                      class="services-icons"
-                      name="videocam-outline"
-                    ></ion-icon>
-                  </div>
-                  <div class="box-title text-white">
-                    <a class="text-white" href="">VIDEO MARKETING</a>
-                  </div>
-                  <p class="box-content text-grey">
-                    Crear relaciones estrechas y duraderas con nuestros
-                    clientes, ayudando a generar estrategias de valor que
-                    alienten el crecimiento mutuo.
-                  </p>
-                </div>
-              </div>
-              <!-- Icon block -->
-              <div class="column">
-                <div class="agency-icon-box">
-                  <div class="is-icon-reveal">
-                    <ion-icon
-                      size="large"
-                      class="services-icons"
-                      name="videocam-outline"
-                    ></ion-icon>
-                  </div>
-                  <div class="box-title text-white">
-                    <a class="text-white" href="">VIDEO MARKETING</a>
-                  </div>
-                  <p class="box-content text-grey">
-                    Crear relaciones estrechas y duraderas con nuestros
-                    clientes, ayudando a generar estrategias de valor que
-                    alienten el crecimiento mutuo.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!-- Icons -->
-            <div class="column is-8">
-              <div class="columns is-vcentered is-multiline">
-                <!-- Icon block -->
-                <div class="column is-6">
-                  <div class="agency-icon-box">
-                    <div class="is-icon-reveal">
-                      <ion-icon
-                        size="large"
-                        class="services-icons"
-                        name="videocam-outline"
-                      ></ion-icon>
-                    </div>
-                    <div class="box-title text-white">
-                      <a class="text-white" href="">VIDEO MARKETING</a>
-                    </div>
-                    <p class="box-content text-grey">
-                      Crear relaciones estrechas y duraderas con nuestros
-                      clientes, ayudando a generar estrategias de valor que
-                      alienten el crecimiento mutuo.
-                    </p>
-                  </div>
-                </div>
-                <!-- Icon block -->
-                <div class="column is-6">
-                  <div class="agency-icon-box">
-                    <div class="is-icon-reveal">
-                      <ion-icon
-                        size="large"
-                        class="services-icons"
-                        name="camera-outline"
-                      ></ion-icon>
-                    </div>
-                    <div class="box-title text-white">
-                      <a class="text-white" href="">PHOTO SESSIONS</a>
-                    </div>
-                    <p class="box-content text-grey">
-                      Dar a conocer el valor de tu negocio para poder cautivar a
-                      tus clientes. Creamos un impacto en el segmento más
-                      adecuado a tus necesidades.
-                    </p>
-                  </div>
-                </div>
-                <!-- Icon block -->
-                <div class="column">
-                  <div class="agency-icon-box">
-                    <div class="is-icon-reveal">
-                      <ion-icon
-                        size="large"
-                        class="services-icons"
-                        name="share-social-outline"
-                      ></ion-icon>
-                    </div>
-                    <div class="box-title text-white">
-                      <a class="text-white" href="">RHETORIK PROGRAM</a>
-                    </div>
-                    <p class="box-content text-grey">
-                      Respeto y Honestidad nos definen. Generamos un entorno
-                      ameno, empático y productivo que incentive la
-                      responsabilidad y el compromiso.
-                    </p>
-                  </div>
-                </div>
-                <!-- Icon block -->
-                <div class="column is-6">
-                  <div class="agency-icon-box">
-                    <div class="is-icon-reveal">
-                      <ion-icon
-                        size="large"
-                        class="services-icons"
-                        name="code-slash-outline"
-                      ></ion-icon>
-                    </div>
-                    <div class="box-title text-white">
-                      <a class="text-white" href="">DISEÑO WEB</a>
-                    </div>
-                    <p class="box-content text-grey">
-                      Tenemos alianza con SimplyDigital, una agencia de diseño
-                      web que puede darle una nueva vida a tu Negocio Online.
-                      ¡No te quedes atrás!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <body id="top">
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+      <div id="loader"></div>
     </div>
 
-    <br />
-
-    <!-- Video -->
-    <!----
-    <div class="section is-medium">
-      <div class="container">
-        <div class="columns is-vcentered quick-feature-wrap">
-          <div class="column is-4">
-         
-            <div class="title quick-feature">
-              <h2 class="clean-text text-white">VIDEO</h2>
-            </div>
-            <div class="title-divider rh-yellow"></div>
-            <br />
-            <ul class="listing text-white">
-              <li>Cortometraje: musical, corporativo, vlog</li>
-              <br />
-              <li>
-                Promocional: diseño personalizado para diversas plataformas
-                digitales.
-              </li>
-              <br />
-              <li>
-                Aéreo: tomas aéreas profesionales (FPV RACE CINEMATIC: SOON)
-              </li>
-              <br />
-              <li>360°: sistemas Cardboard o VR</li>
-            </ul>
+    <!-- page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
+      <!-- # site header 
+        ================================================== -->
+      <header class="s-header">
+        <div class="s-header__block">
+          <div class="s-header__logo">
+            <a class="logo" href="index.html">
+              <img src="../img/logo.png" alt="Homepage" />
+            </a>
           </div>
 
-          <div class="column is-7 is-offset-2">
-            <div class="iframe-container">
+          <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+        <!-- end s-header__block -->
+
+        <div class="row s-header__nav-wrap">
+          <nav class="s-header__nav">
+            <ul>
+              <li class="current">
+                <a href="#intro" class="smoothscroll">Intro</a>
+              </li>
+              <li>
+                <a href="#services" class="smoothscroll">¿Qué hacemos?</a>
+              </li>
+              <!--<li><a href="#works" class="smoothscroll">Our Works</a></li>-->
+              <li><a href="#contact" class="smoothscroll">Contacto</a></li>
+            </ul>
+          </nav>
+
+          <ul class="s-header__social">
+            <li>
+              <ion-icon
+                size="large"
+                class="services-icons"
+                name="logo-instagram"
+              ></ion-icon>
+            </li>
+            <li></li>
+            <li>
+              <ion-icon
+                size="large"
+                class="services-icons"
+                name="logo-youtube"
+              ></ion-icon>
+            </li>
+          </ul>
+        </div>
+        <!-- end s-header__nav-wrap -->
+      </header>
+      <!-- end s-header -->
+
+      <video muted loop autoplay src="../video/trimmed.mp4"></video>
+
+      <!-- # intro 
+        ================================================== -->
+      <section
+        style="padding-bottom: 0"
+        id="intro"
+        class="s-intro target-section"
+      >
+        <div class="row">
+          <div class="column">
+            <div class="s-intro__top-block">
+              <h1 class="s-intro__text">
+                Creamos contenido que<br />
+                te ayude a crecer y posicionarte <br />
+                en tu mercado objetivo<span>.</span>
+              </h1>
+
+              <a href="#services" class="s-intro__scroll-down smoothscroll">
+                <span>Scroll Down</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="
+                    fill: rgba(0, 0, 0, 1);
+                    transform: rotate(180deg);
+                    -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+                  "
+                >
+                  <path
+                    d="M21 11L6.414 11 11.707 5.707 10.293 4.293 2.586 12 10.293 19.707 11.707 18.293 6.414 13 21 13z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-----
+
+            <div class="row about-stats stats block-lg-one-fourth block-md-one-half block-mob-whole" data-animate-block>
+                
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter=30><span>30</span>+</div>
+                    <h5>Happy Customers</h5>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing 
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                    magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter=35><span>35</span>+</div>
+                    <h5>Hours Work</h5>
+                    <p>
+                    Eleifend donec pretium vulputate sapien nec sagittis 
+                    aliquam malesuada. Eu scelerisque felis imperdiet proin 
+                    fermentum leo. Cursus turpis massa tincidunt.
+                    </p>
+                </div>
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter=41><span>41</span>+</div>
+                    <h5>Coffee Drinks</h5>
+                    <p>
+                    Volutpat commodo sed egestas egestas fringilla phasellus 
+                    faucibus scelerisque. Est velit egestas dui id ornare. 
+                    Leo urna molestie at elementum.
+                    </p>
+                </div>
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter=38><span>38</span>+</div>
+                    <h5>Completed Projects</h5> 
+                    <p>
+                    Nulla pharetra diam sit amet nisl suscipit adipiscing 
+                    bibendum est. Quis risus sed vulputate odio ut. 
+                    Lectus arcu bibendum at varius vel eu facilisis.
+                    </p>
+                </div>
+    
+            </div> 
+
+            ---->
+      </section>
+      <!-- end s-intro -->
+
+      <!-- # services
+        ================================================== -->
+      <section id="services" class="s-works target-section">
+        <div class="row section-header has-bottom-sep">
+          <div class="column lg-12">
+            <h3 style="color: lightgrey" class="text-pretitle">
+              ¿Qué hacemos?
+            </h3>
+            <h1 class="text-display-title">
+              Soluciones integrales de marketing
+            </h1>
+          </div>
+        </div>
+        <!-- end section-header -->
+
+        <div
+          class="row services-list block-lg-one-third block-tab-whole"
+          data-animate-block
+        >
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/edicion_audiovisual.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <a class="smoothscroll" href="#videoMarketing"
+                ><h3 class="h4">Video Marketing</h3></a
+              >
+              <p>
+                Nemo cupiditate ab quibusdam quaerat impedit magni. Earum
+                suscipit ipsum laudantium.
+              </p>
+            </div>
+          </div>
+
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/foto_video.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <a class="smoothscroll" href="#photoShoots"
+                ><h3 class="h4">Photo sessions</h3></a
+              >
+              <p>
+                Nemo cupiditate ab quibusdam quaerat impedit magni. Earum
+                suscipit ipsum laudantium.
+              </p>
+            </div>
+          </div>
+
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/diseño_web.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <a class="smoothscroll" href="#webDev"
+                ><h3 class="h4">Desarrollo Web</h3></a
+              >
+              <p>
+                Nemo cupiditate ab quibusdam quaerat impedit magni. Earum
+                suscipit ipsum laudantium.
+              </p>
+            </div>
+          </div>
+
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/redes.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <a class="smoothscroll" href="#rProgram"
+                ><h3 class="h4">Rhetorik program</h3></a
+              >
+              <p>
+                Nemo cupiditate ab quibusdam quaerat impedit magni. Earum
+                suscipit ipsum laudantium.
+              </p>
+            </div>
+          </div>
+
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/renta_de_estudio.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <h3 class="h4">Renta de estudio</h3>
+              <p>
+                Nemo cupiditate ab quibusdam quaerat impedit magni. Earum
+                suscipit ipsum laudantium.
+              </p>
+            </div>
+          </div>
+
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/branding.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <h3 class="h4">Branding</h3>
+              <p>
+                Nemo cupiditate ab quibusdam quaerat impedit magni. Earum
+                suscipit ipsum laudantium.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- end services-list -->
+      </section>
+      <!-- end s-services -->
+
+      <!-- ## Video Works
+        ================================================== -->
+      <section id="videoMarketing" class="s-works target-section">
+        <div class="row section-header section-header--dark has-bottom-sep">
+          <div style="margin-bottom: 0" class="column lg-12">
+            <h3 style="color: lightgrey" class="text-pretitle">Video</h3>
+            <h1 class="text-display-title-2">
+              Una descripcion breve de la propuesta de valor de video..
+            </h1>
+          </div>
+        </div>
+        <!-- end section-header -->
+
+        <div
+          style="margin-top: 0; margin-bottom: 180px; padding-top: 0"
+          class=""
+        >
+          <div class="">
+            <div class="video-container">
               <iframe
                 class="responsive-iframe"
                 width="560"
@@ -659,587 +374,506 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  -->
+        <!-- end video-block -->
 
-    <!-- /Feature -->
-    <!----
-    <div class="section is-medium">
-      <div class="container">
-        <div class="columns is-vcentered quick-feature-wrap">
-          <div class="column is-6">
+        <div
+          id="photoShoots"
+          class="row section-header section-header--dark has-bottom-sep"
+        >
+          <div class="column lg-12">
+            <h3 style="color: lightgrey" class="text-pretitle">Photoshoots</h3>
+            <h1 class="text-display-title-2">
+              Descripción breve de la propuesta de valor de el photoshoot.
+            </h1>
+          </div>
+        </div>
+        <!-- end section-header -->
+
+        <div
+          class="row folio-list block-lg-one-third block-tab-one-half block-stack-on-550 collapse"
+          data-animate-block
+        >
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="galeria.html"
+                  title="Name"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Frontend Design</div>
+                <h4 class="folio-item__title">Ir a galería</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 18 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="galeria.html"
+                  title="Name"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Frontend Design</div>
+                <h4 class="folio-item__title">Ir a galería</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 19 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="galeria.html"
+                  title="Name"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_24ee6eaad5794636be9c9ca6dc040843~mv2.jpg/v1/fill/w_969,h_545,al_c,q_85,usm_0.66_1.00_0.01/Arturo%20Challa.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Frontend Design</div>
+                <h4 class="folio-item__title">Ir a galería</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 20 -->
+
+          <br />
+
+          <div
+            style="width: 100%"
+            class="row row-x-center text-center s-contact__content"
+          >
+            <div class="column lg-12">
+              <div style="background-color: inherit" class="btn-wrap">
+                <a href="galeria.html" class="btn"> Visitar galería </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- folio-list -->
+      </section>
+      <!-- end s-works -->
+
+      <!-- ## Program
+        ================================================== -->
+      <section id="rProgram" class="s-works target-section">
+        <div
+          class="row folio-list block-lg-one-half block-tab-one-half block-stack-on-550 collapse"
+          data-animate-block
+        >
+          <div class="column">
+            <h3 class="header-text" style="color: lightgrey">
+              RHETORIK PROGRAM
+            </h3>
+            <h1 class="text-display-title-2">
+              Propuesta de valor de rhetorik program.
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+              modi ducimus, praesentium blanditiis nesciunt aliquid atque
+              architecto repudiandae dignissimos voluptate et beatae deleniti
+              perspiciatis qui molestias vitae ipsum est iusto!
+            </p>
+          </div>
+          <!-- end column -->
+          <div class="column">
             <img
-              src="https://static.wixstatic.com/media/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_480,h_520,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01/d27e02_198b8a3fcfc54beeb5adb0b9c4ed1f58~mv2_d_5184_3456_s_4_2.webp"
-              data-base-url="assets/img/graphics/icons/kit2-3"
-              data-extension=".svg"
+              src="images/portfolio/minimalismo.jpg"
+              srcset="
+                images/portfolio/minimalismo.jpg    1x,
+                images/portfolio/minimalismo@2x.jpg 2x
+              "
               alt=""
             />
           </div>
+          <!-- end column -->
+        </div>
+        <!-- folio-list -->
+      </section>
+      <!-- end s-works -->
 
-          <div class="column is-4 is-offset-2">
-        
-            <div class="title quick-feature">
-              <h2 class="clean-text text-white">FOTOGRAFÍA</h2>
-            </div>
-            <div class="title-divider rh-yellow"></div>
-            <br />
-            <ul class="listing text-white">
-              <li>Producto</li>
-              <br />
-              <li>Modelaje</li>
-              <br />
-              <li>Diseño Publicitario</li>
-              <br />
-              <li>Promocional: fotografía con fondo digital</li>
-              <br />
-              <li>Aéreo: fotografía por drone</li>
-              <br />
-              <li>360°: sistemas Cardboard y POV</li>
-            </ul>
+      <!-- ## Web Dev
+        ================================================== -->
+      <section id="webDev" class="s-works target-section">
+        <div class="row section-header section-header--dark has-bottom-sep">
+          <div class="column lg-12">
+            <h3 style="color: lightgrey" class="text-pretitle">
+              Desarrollo Web
+            </h3>
+            <h1 class="text-display-title-2">
+              Hacemos brillar tu presencia en línea con un sitio web hecho a la
+              medida de tus necesidades.
+            </h1>
           </div>
         </div>
-      </div>
-    </div>
+        <!-- end section-header -->
 
-    --->
-    <span id="video"></span>
-    <div class="section initial-message">
-      <div class="container">
-        <!-- Title -->
-        <div class="section-title-wrapper has-text-centered pt-40 pb-40">
-          <h3 class="title is-4">Video</h3>
-          <h1 class="subtitle is-3 text-white">
-            Creamos contenido que te ayude a atraer, mantener, crecer y
-            posicionarte en tu mercado objetivo.
-          </h1>
-        </div>
-
-        <div class="columns is-vcentered is-multiline pb-60">
-          <div class="column is-8 is-offset-2 is-relative is-centered-portrait">
-            <!-- 16by9 video -->
-            <div class="bulkit-player-container is-16by9 reversed-play">
-              <iframe
-                class="responsive-iframe"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/NjMbfyzE4oQ?start=38&vq=large"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                autoplay
-                muted="muted"
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="column is-4 is-offset-2">
-            <div class="side-title mb-10">
-              <h3 class="subtitle is-5">
-                Cortometraje: musical, corporativo, vlog
-              </h3>
-            </div>
-            <!----
-            <p class="side-paragraph is-size-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eodem
-              modo is enim tibi nemo dabit, quod, expetendum sit, id esse
-              laudabile.
-            </p>
-          --></div>
-
-          <div class="column is-4">
-            <div class="side-title mb-10">
-              <h3 class="subtitle is-5">360°: sistemas Cardboard o VR</h3>
-            </div>
-            <!----
-            <p class="side-paragraph is-size-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eodem
-              modo is enim tibi nemo dabit, quod, expetendum sit, id esse
-              laudabile.
-            </p>
-          --></div>
-
-          <div class="column is-4 is-offset-2">
-            <div class="side-title mb-10">
-              <h3 class="subtitle is-5">
-                Promocional: diseño personalizado para diversas plataformas
-                digitales.
-              </h3>
-            </div>
-            <!----
-            <p class="side-paragraph is-size-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eodem
-              modo is enim tibi nemo dabit, quod, expetendum sit, id esse
-              laudabile.
-            </p>
-          --></div>
-
-          <div class="column is-4">
-            <div class="side-title mb-10">
-              <h3 class="subtitle is-5">
-                Aéreo: tomas aéreas profesionales (FPV RACE CINEMATIC: SOON)
-              </h3>
-            </div>
-            <!----
-            <p class="side-paragraph is-size-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eodem
-              modo is enim tibi nemo dabit, quod, expetendum sit, id esse
-              laudabile.
-            </p>
-          --></div>
-        </div>
-      </div>
-    </div>
-
-    <!----
-    <section class="hero is-medium initial-message">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-vcentered">
-            <div style="margin-top: -4rem" class="column is-9">
-              <h3 class="title is-4">Video</h3>
-              <h1 class="subtitle is-3 text-white">
-                Creamos contenido que te ayude a atraer, mantener, crecer y
-                posicionarte en tu mercado objetivo.
-              </h1>
-              <div class="columns is-vcentered">
-                <div class="column">
-                  <ul>
-                    <li class="subtitle is-5">
-                      Cortometraje: musical, corporativo, vlog
-                    </li>
-
-                    <li class="subtitle is-5">
-                      Promocional: diseño personalizado para diversas
-                      plataformas digitales.
-                    </li>
-                  </ul>
-                </div>
-                <div class="column">
-                  <ul>
-                    <li class="subtitle is-5">360°: sistemas Cardboard o VR</li>
-
-                    <li class="subtitle is-5">
-                      Aéreo: tomas aéreas profesionales (FPV RACE CINEMATIC:
-                      SOON)
-                    </li>
-                  </ul>
-                </div>
+        <div
+          class="row folio-list block-lg-one-third block-tab-one-half block-stack-on-550 collapse"
+          data-animate-block
+        >
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <span
+                  class="folio-item__thumb-link"
+                  href="../img/webDev1.png"
+                  title="Web Dev 1"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="../img/webDev1.png"
+                    srcset="../img/webDev1.png, ../img/webDev1.png 1x"
+                    alt=""
+                  />
+                </span>
               </div>
-              <br />
-            </div>
-          </div>
-          <div class="columns is-vcentered">
-            <div class="column">
-              <div class="iframe-container">
-                <iframe
-                  class="responsive-iframe"
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/NjMbfyzE4oQ?start=38&vq=large"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                  autoplay
-                  muted="muted"
-                ></iframe>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoria</div>
+                <h4 class="folio-item__title">Nombre</h4>
               </div>
-              <span class="white-text">GAV Detailing</span>
-            </div>
-            <div class="column">
-              <div class="iframe-container">
-                <iframe
-                  class="responsive-iframe"
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/YwJ3wygrzso?start=38&vq=large"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                  autoplay
-                  muted="muted"
-                ></iframe>
-              </div>
-              <span class="white-text">Rhetorik Video Reel</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    --->
-
-    <div class="spacer"></div>
-
-    <!--GALERÏA-->
-    <span id="galeria"></span>
-    <div class="section-wrap is-hidden-mobile">
-      <div class="section is-medium image-section">
-        <div class="container initial-message">
-          <h3 class="title is-4">Fotografía</h3>
-          <h1 class="subtitle is-3 text-white">
-            Creamos contenido que te ayude a atraer, mantener, crecer y
-            posicionarte en tu mercado objetivo.
-          </h1>
-
-          <div class="support-features">
-            <div class="columns is-multiline is-vcentered">
-              <div class="column is-6">
-                <h3 class="subtitle is-5">Producto</h3>
-              </div>
-              <div class="column is-6">
-                <h3 class="subtitle is-5">Fotografía con fondo digital</h3>
-              </div>
-              <div class="column is-6">
-                <h3 class="subtitle is-5">Modelaje</h3>
-              </div>
-              <div class="column is-6">
-                <h3 class="subtitle is-5">Fotografía por drone</h3>
-              </div>
-              <div class="column is-6">
-                <h3 class="subtitle is-5">Diseño Publicitario</h3>
-              </div>
-              <div class="column is-6">
-                <h3 class="subtitle is-5">Sistemas Cardboard y POV</h3>
-              </div>
-            </div>
-            <br />
-            <a href="galeria.html">
-              <h2 style="color: white" class="subtitle is-4">Ir a galería</h2>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div
-        class="right has-background-image"
-        data-background="../img/gallery_prev.png"
-        data-demo-background="../img/gallery_prev.png"
-      ></div>
-    </div>
-    <!--GALERÏA MOBILE-->
-    <div class="is-hidden-desktop">
-      <div class="hero is-fullheight">
-        <div class="hero-body">
-          <div class="container">
-            <div class="columns">
-              <div class="column">
-                <h2 class="title is-2">Fotografía</h2>
-                <br />
-                <ul>
-                  <li class="subtitle is-5">Producto</li>
-                  <li class="subtitle is-5">Fotografía con fondo digital</li>
-                  <li class="subtitle is-5">Modelaje</li>
-                  <li class="subtitle is-5">Fotografía por drone</li>
-                  <li class="subtitle is-5">Diseño Publicitario</li>
-                  <li class="subtitle is-5">Sistemas Cardboard y POV</li>
-                </ul>
-              </div>
-              <div class="column">
-                <figure class="image is-4by3">
-                  <img src="../img/gallery_prev.png" />
-                </figure>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="spacer"></div>
-
-    <!--RRSS-->
-    <span id="rrss"></span>
-    <section class="hero is-medium initial-message">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-vcentered">
-            <div style="margin-top: -4rem" class="column is-8">
-              <h3 class="title is-4">Rhetorik Program</h3>
-              <h1 class="subtitle is-3 text-white">
-                Creamos contenido que te ayude a atraer, mantener, crecer y
-                posicionarte en tu mercado objetivo.
-              </h1>
-              <p class="grey-text subtitle is-5">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
-                vitae incidunt ad quis dicta veniam omnis dolorum natus cumque
-                sapiente asperiores, ullam nulla officiis ipsum veritatis
-                assumenda praesentium optio perspiciatis!
-              </p>
-              <br />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--WEB DESIGN-->
-    <span id="web"></span>
-    <div id="features" class="section is-medium">
-      <div class="container">
-        <!-- Title -->
-        <div class="section-title-wrapper has-text-centered">
-          <h3 class="title is-4">Diseño Web</h3>
-          <h1 class="subtitle is-3 text-white">
-            Hacemos brillar tu presencia en línea con un sitio web hecho a la
-            medida de tus necesidades.
-          </h1>
-        </div>
-
-        <div class="content-wrapper tabbed-features">
-          <!-- Navigation pills -->
-          <div class="columns is-vcentered">
-            <div class="column">
-              <div class="navigation-tabs outlined-pills animated-tabs">
-                <div class="tabs is-centered">
-                  <ul>
-                    <li class="tab-link is-active" data-tab="new-deals">
-                      <a>Ecommerce</a>
-                    </li>
-                    <li class="tab-link" data-tab="invoices">
-                      <a>Landing Pages</a>
-                    </li>
-                    <li class="tab-link" data-tab="reporting">
-                      <a>Webapps</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- Pill content -->
-                <div id="new-deals" class="navtab-content is-active">
-                  <div class="columns is-vcentered">
-                    <div class="column is-6">
-                      <figure class="image">
-                        <img src="../img/1.png" alt="" />
-                      </figure>
-                    </div>
-                    <div class="column is-6">
-                      <div class="inner-content">
-                        <h2 class="feature-headline">
-                          Create an incredible user and customer experience
-                        </h2>
-                        <br />
-                        <p class="grey-text subtitle is-5">
-                          Lorem ipsum dolor sit amet, vim quidam blandit
-                          voluptaria no, has eu lorem convenire incorrupte.
-                        </p>
-                        <br />
-                        <button class="button is-black is-medium">
-                          <ion-icon
-                            size="large"
-                            class="services-icons"
-                            name="videocam-outline"
-                          ></ion-icon
-                          >&nbsp;&nbsp;Lorem
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Pill content -->
-                <div id="invoices" class="navtab-content">
-                  <div class="columns is-vcentered">
-                    <div class="column is-6">
-                      <figure class="image">
-                        <img src="../img/3.png" alt="" />
-                      </figure>
-                    </div>
-                    <div class="column is-6">
-                      <div class="inner-content">
-                        <h2 class="feature-headline">
-                          Create invoices seamlessly and get paid incredibly
-                          fast
-                        </h2>
-                        <br />
-                        <p class="grey-text subtitle is-5">
-                          Lorem ipsum dolor sit amet, vim quidam blandit
-                          voluptaria no, has eu lorem convenire incorrupte.
-                        </p>
-                        <br />
-                        <button class="button is-black is-medium">
-                          <ion-icon
-                            size="large"
-                            class="services-icons"
-                            name="videocam-outline"
-                          ></ion-icon
-                          >&nbsp;&nbsp;Lorem
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Pill content -->
-                <div id="reporting" class="navtab-content">
-                  <div class="columns is-vcentered">
-                    <div class="column is-6">
-                      <figure class="image">
-                        <img src="../img/2.png" alt="" />
-                      </figure>
-                    </div>
-                    <div class="column is-6">
-                      <div class="inner-content">
-                        <h2 class="feature-headline">
-                          Get insight on your data and take managed decisions
-                        </h2>
-                        <br />
-                        <p class="grey-text subtitle is-5">
-                          Lorem ipsum dolor sit amet, vim quidam blandit
-                          voluptaria no, has eu lorem convenire incorrupte.
-                        </p>
-                        <br />
-                        <button class="button is-black is-medium">
-                          <ion-icon
-                            size="large"
-                            class="services-icons"
-                            name="videocam-outline"
-                          ></ion-icon
-                          >&nbsp;&nbsp;Lorem
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="spacer"></div>
-
-    <!--Footer-->
-    <footer class="footer-light-medium">
-      <div class="container">
-        <div class="columns footer-body">
-          <!-- Column -->
-          <div class="column is-4">
-            <div class="pt-10 pb-10">
-              <img class="small-footer-logo" src="../img/logo.png" alt="" />
-
-              <div class="footer-description">
-                Somos una empresa dedicada a crear contenido digital que cautive
-                a la comunidad de tu negocio.
-                <br />
-                ¡Acércate a nosotros!
-              </div>
-            </div>
-            <div>
-              <div class="social-links">
-                <a href="#">
-                  <ion-icon
-                    class="footer-icons"
-                    name="logo-whatsapp"
-                  ></ion-icon>
-                </a>
-                <a href="#">
-                  <ion-icon
-                    class="footer-icons"
-                    name="logo-instagram"
-                  ></ion-icon>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Column -->
-          <div class="column is-6 is-offset-2">
-            <div class="columns">
-              <!-- Column -->
-              <div class="column">
-                <ul class="footer-column">
-                  <li class="column-header">Links 1</li>
-                  <li class="column-item"><a href="#">Lorem</a></li>
-                  <li class="column-item">
-                    <a href="#">Lorem</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- Column -->
-              <div class="column">
-                <ul class="footer-column">
-                  <li class="column-header">Terms</li>
-                  <li class="column-item"><a href="#">Terms of Service</a></li>
-                  <li class="column-item"><a href="#">Privacy policy</a></li>
-                  <li class="column-item">
-                    Copyright &copy; 2022 Rhetorik&nbsp;
-                    <span id="currentYear"></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-copyright has-text-centered">
-          <!--<p>&copy; 2019-2020 | <a href="https://cssninja.io">Css Ninja</a> | All Rights Reserved.</p>-->
-        </div>
-      </div>
-    </footer>
-
-    <!-- Modal Markup -->
-    <div id="vertical-form-modal" class="modal modal-sm">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <div class="flex-card simple-shadow">
-          <div class="card-body">
-            <h2 class="title has-text-centered is-3 mb-40">Become a member</h2>
-            <h5 class="subtitle has-text-centered is-5 mb-40">
-              Exclusive monthly cupons
-            </h5>
-            <div class="control-material is-accent">
-              <input class="material-input" type="text" required />
-              <span class="material-highlight"></span>
-              <span class="bar"></span>
-              <label>Name *</label>
-            </div>
-            <div class="control-material is-accent">
-              <input class="material-input" type="email" required />
-              <span class="material-highlight"></span>
-              <span class="bar"></span>
-              <label>Email *</label>
-            </div>
-            <div class="mt-20">
-              <button
-                class="button button-cta btn-align raised is-fullwidth no-lh site-blue"
+              <a
+                href="#"
+                title="Project Link"
+                style="background: black"
+                class="folio-item__project-link"
+                >Visitar proyecto</a
               >
-                Register
-              </button>
+            </div>
+          </div>
+          <!-- end column -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <span
+                  class="folio-item__thumb-link"
+                  href="../img/webDev2.png"
+                  title="Web Dev 2"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="../img/webDev2.png"
+                    srcset="../img/webDev2.png, ../img/webDev2.png 1x"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoria</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <a
+                href="#"
+                title="Project Link"
+                style="background: black"
+                class="folio-item__project-link"
+                >Visitar proyecto</a
+              >
+            </div>
+          </div>
+          <!-- end column -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <span
+                  class="folio-item__thumb-link"
+                  href="../img/webDev3.png"
+                  title="Web Dev 3"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="../img/webDev3.png"
+                    srcset="../img/webDev3.png, ../img/webDev3.png 1x"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoria</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <a
+                href="#"
+                title="Project Link"
+                style="background: black"
+                class="folio-item__project-link"
+                >Visitar proyecto</a
+              >
+            </div>
+          </div>
+          <!-- end column -->
+        </div>
+        <!-- folio-list -->
+
+        <!------
+            <div class="row testimonials" data-animate-block>
+                <div class="column lg-12">
+    
+                    <div class="swiper-container testimonial-slider" data-animate-el>
+    
+                        <div class="swiper-wrapper">
+
+                            <div class="testimonial-slider__slide swiper-slide">
+                                <div class="testimonial-slider__author">
+                                    <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                    <cite class="testimonial-slider__cite">
+                                        <strong>Tim Cook</strong>
+                                        <span>CEO, Apple</span>
+                                    </cite>
+                                </div>
+                                <p>
+                                Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
+                                Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum.
+                                Laudantium quia consequatur molestias.
+                                </p>
+                            </div> 
+            
+                            <div class="testimonial-slider__slide swiper-slide">
+                                <div class="testimonial-slider__author">
+                                    <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                    <cite class="testimonial-slider__cite">
+                                        <strong>Sundar Pichai</strong>
+                                        <span>CEO, Google</span>
+                                    </cite>
+                                </div>
+                                <p>
+                                Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
+                                Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
+                                Quasi voluptas eius distinctio. Atque eos maxime.
+                                </p>
+                            </div> 
+            
+                            <div class="testimonial-slider__slide swiper-slide">
+                                <div class="testimonial-slider__author">
+                                    <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                    <cite class="testimonial-slider__cite">
+                                        <strong>Satya Nadella</strong>
+                                        <span>CEO, Microsoft</span>
+                                    </cite>
+                                </div>
+                                <p>
+                                Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
+                                Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
+                                Voluptatem dignissimos ut.
+                                </p>
+                            </div> 
+    
+                            <div class="testimonial-slider__slide swiper-slide">
+                                <div class="testimonial-slider__author">
+                                    <img src="images/avatars/user-06.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                    <cite class="testimonial-slider__cite">
+                                        <strong>Jeff Bezos</strong>
+                                        <span>CEO, Amazon</span>
+                                    </cite>
+                                </div>
+                                <p>
+                                Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
+                                quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. 
+                                Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                                </p>
+                            </div> 
+        
+                        </div> 
+    
+                        <div class="swiper-pagination"></div>
+    
+                    </div> 
+    
+                </div> 
+            </div> 
+            ---->
+        <!-- end row testimonials -->
+      </section>
+      <!-- end s-works -->
+
+      <!-- ## contact
+        ================================================== -->
+      <section id="contact" class="s-contact target-section">
+        <div class="row section-header section-header--dark">
+          <div class="column lg-12">
+            <h3 style="color: lightgrey" class="text-pretitle">Contacto</h3>
+            <h1 class="text-display-title">
+              Te ayudamos a crear tu proyecto...
+            </h1>
+          </div>
+        </div>
+
+        <div class="row row-x-center text-center s-contact__content">
+          <div class="column lg-12">
+            <p class="lead">
+              Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac
+              augue. Fusce vel dui. In ac felis quis tortor malesuada pretium.
+              Curabitur vestibulum aliquam leo. Quasi sed at voluptas corrupti
+              eius distinctio.
+            </p>
+            <div class="btn-wrap">
+              <a href="#0" class="btn"> Contacto </a>
             </div>
           </div>
         </div>
-      </div>
-      <button
-        class="modal-close is-large is-hidden"
-        aria-label="close"
-      ></button>
+
+        <footer class="s-footer">
+          <div class="row s-footer__top">
+            <div
+              class="column lg-5 md-8 stack-on-700 s-footer__block contact-address"
+            >
+              <h4 class="h6">Rhetorik Digital Media</h4>
+
+              <p style="font-size: 0.75em">
+                En Rhetorik nos dedicamos a crear contenido digital que cautive
+                a la comunidad de tu negocio. ¡Acércate a nosotros!
+              </p>
+            </div>
+
+            <div
+              class="column lg-3 md-4 stack-on-700 s-footer__block contact-social"
+            >
+              <h4 class="h6">Síguenos</h4>
+
+              <ul class="contact-list">
+                <li><a href="#0">Instagram</a></li>
+                <li><a href="#0">Youtube</a></li>
+              </ul>
+            </div>
+
+            <div class="column lg-3 md-12 s-footer__block contact-number">
+              <h4 class="h6">Contacto</h4>
+
+              <ul class="contact-list">
+                <li><a href="#">55 5555 5555</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- end s-footer__top -->
+
+          <div class="row s-footer__bottom">
+            <div class="column ss-copyright">
+              <span>© Copyright Rhetorik</span>
+            </div>
+          </div>
+          <!-- end s-footer__top -->
+        </footer>
+      </section>
+      <!-- end s-contact -->
     </div>
-    <!-- /Modal Markup -->
+    <!-- end -s-pagewrap -->
 
-    <!-- Back To Top Button -->
-    <div id="backtotop"><a href="#"></a></div>
-    <script>
-      const d = new Date();
-      const cyear = d.getFullYear();
-      const ylim = cyear - 18;
-      //alert(cyear - 18);
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
 
-      window.addEventListener("scroll", function () {
-        if (this.pageYOffset > 40) {
-          document.getElementById("navEnd").classList.add("sticky-menu-color");
-        } else {
-          document
-            .getElementById("navEnd")
-            .classList.remove("sticky-menu-color");
-        }
-      });
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button
+              class="pswp__button pswp__button--close"
+              title="Close (Esc)"
+            ></button>
+            <button
+              class="pswp__button pswp__button--share"
+              title="Share"
+            ></button>
+            <button
+              class="pswp__button pswp__button--fs"
+              title="Toggle fullscreen"
+            ></button>
+            <button
+              class="pswp__button pswp__button--zoom"
+              title="Zoom in/out"
+            ></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button
+            class="pswp__button pswp__button--arrow--left"
+            title="Previous (arrow left)"
+          ></button>
+          <button
+            class="pswp__button pswp__button--arrow--right"
+            title="Next (arrow right)"
+          ></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end photoSwipe background -->
 
-      const d = new Date();
-      document.getElementById("currentYear").innerHTML = d.getFullYear();
-    </script>
-    <script src="prods.js"></script>
-    <script src="../js/gallery.js"></script>
-    <script src="../assets/js/app.js"></script>
-    <script src="../assets/js/core.js"></script>
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
