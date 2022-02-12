@@ -52,6 +52,11 @@
         width: 100%;
         padding-top: 0; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
       }
+      .video-title {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+      }
 
       /* Then style the iframe to fit in the container div with full height and width */
       .responsive-iframe {
@@ -68,6 +73,11 @@
       }
       html {
         scroll-behavior: smooth;
+      }
+      @media screen and (min-width: 760px) {
+        .offset {
+          margin-left: 110px;
+        }
       }
     </style>
   </head>
@@ -132,7 +142,11 @@
       </header>
       <!-- end s-header -->
 
-      <video muted loop autoplay src="../video/trimmed.mp4"></video>
+      <div class="video-container">
+        <div class="overlay"></div>
+        <video muted loop autoplay src="../video/trimmed.mp4"></video>
+        <!--<h1 class="video-title">Rhetorik digital media</h1>-->
+      </div>
 
       <!-- # intro 
         ================================================== -->
@@ -329,10 +343,7 @@
             </div>
             <div class="service-text">
               <h3 class="h4">Branding</h3>
-              <p>
-                Nemo cupiditate ab quibusdam quaerat impedit magni. Earum
-                suscipit ipsum laudantium.
-              </p>
+              <p>(Próximamente)</p>
             </div>
           </div>
         </div>
@@ -347,8 +358,22 @@
           <div style="margin-bottom: 0" class="column lg-12">
             <h3 style="color: lightgrey" class="text-pretitle">Video</h3>
             <h1 class="text-display-title-2">
-              Una descripcion breve de la propuesta de valor de video..
+              El método de converdión más efectivo del momento.
             </h1>
+            <div style="text-align: left" class="row">
+              <div class="column">
+                <ul>
+                  <li>Sistemas Cardboard o VR.</li>
+                  <li>Video promocional.</li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul>
+                  <li>Tomas aéreas profesionales</li>
+                  <li>Cortometraje musical, corporativo, o vlog</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end section-header -->
@@ -383,8 +408,24 @@
           <div class="column lg-12">
             <h3 style="color: lightgrey" class="text-pretitle">Photoshoots</h3>
             <h1 class="text-display-title-2">
-              Descripción breve de la propuesta de valor de el photoshoot.
+              Somos expertos en hacer brillar a tus productos.
             </h1>
+            <div style="text-align: left" class="row">
+              <div class="column">
+                <ul>
+                  <li>Producto</li>
+                  <li>Diseño Publicitario</li>
+                  <li>Sistemas Cardboard y POV</li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul>
+                  <li>Modelaje</li>
+                  <li>Fotografía por drone</li>
+                  <li>Fotografía con fondo digital</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end section-header -->
@@ -518,24 +559,22 @@
             <h3 class="header-text" style="color: lightgrey">
               RHETORIK PROGRAM
             </h3>
-            <h1 class="text-display-title-2">
-              Propuesta de valor de rhetorik program.
+            <h1 style="width: 80%" class="text-display-title-2">
+              Creación de contenido para Redes Sociales
             </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
-              modi ducimus, praesentium blanditiis nesciunt aliquid atque
-              architecto repudiandae dignissimos voluptate et beatae deleniti
-              perspiciatis qui molestias vitae ipsum est iusto!
+            <p style="width: 80%">
+              Despreocupate de tener que pensar en qué vas a publicar en redes
+              sociales. Nos encargamos de generar el contenido que estará
+              alimentando a tus cuentas durante semanas. Manten a tu mercado
+              actualizado sobre tus productos y/o promociones.
             </p>
           </div>
           <!-- end column -->
-          <div class="column">
+          <div style="text-align: center" class="column">
             <img
-              src="images/portfolio/minimalismo.jpg"
-              srcset="
-                images/portfolio/minimalismo.jpg    1x,
-                images/portfolio/minimalismo@2x.jpg 2x
-              "
+              style="height: 100%"
+              src="./images/rProgram.png"
+              srcset="./images/rProgram.png 1x, ./images/rProgram.png 2x"
               alt=""
             />
           </div>
@@ -554,9 +593,10 @@
               Desarrollo Web
             </h3>
             <h1 class="text-display-title-2">
-              Hacemos brillar tu presencia en línea con un sitio web hecho a la
-              medida de tus necesidades.
+              En internet, el mayor diferenciador de tu negocio es un excelente
+              sitio web.
             </h1>
+            <p>Generamos un sitio web que ayude a creceer a tu negocio.</p>
           </div>
         </div>
         <!-- end section-header -->
@@ -658,6 +698,78 @@
         </div>
         <!-- folio-list -->
 
+        <!-- ## Renta de estudio
+        ================================================== -->
+        <section id="rRenta" class="s-works target-section">
+          <div
+            class="row folio-list block-lg-one-half block-tab-one-half block-stack-on-550 collapse"
+            data-animate-block
+          >
+            <!-- end column -->
+            <div class="column">
+              <img
+                src="images/renta.png"
+                srcset="images/renta.png 1x, images/renta.png 2x"
+                alt=""
+              />
+            </div>
+            <div class="column">
+              <div class="offset">
+                <h3 class="header-text" style="color: lightgrey; margin-top: 0">
+                  RENTA DE ESTUDIO
+                </h3>
+                <h1 class="text-display-title-2">
+                  Propuesta de valor de rhetorik program.
+                </h1>
+                <p>
+                  Contamos con un espacio que te permite generar contenido de
+                  calidad profesional. [lista de lo que contiene el espacio].
+                </p>
+              </div>
+            </div>
+            <!-- end column -->
+          </div>
+          <!-- folio-list -->
+        </section>
+        <!-- end s-works -->
+
+        <!-- ## Branding
+        ================================================== -->
+        <!----
+        <section id="rBranding" class="s-works target-section">
+          <div
+            class="row folio-list block-lg-one-half block-tab-one-half block-stack-on-550 collapse"
+            data-animate-block
+          >
+            <div class="column">
+              <h3 class="header-text" style="color: lightgrey">BRANDING</h3>
+              <h1 class="text-display-title-2">
+                Propuesta de valor de rhetorik program.
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+                modi ducimus, praesentium blanditiis nesciunt aliquid atque
+                architecto repudiandae dignissimos voluptate et beatae deleniti
+                perspiciatis qui molestias vitae ipsum est iusto!
+              </p>
+            </div>
+
+            <div class="column">
+              <img
+                src="images/portfolio/minimalismo.jpg"
+                srcset="
+                  images/portfolio/minimalismo.jpg    1x,
+                  images/portfolio/minimalismo@2x.jpg 2x
+                "
+                alt=""
+              />
+            </div>
+
+          </div>
+
+        </section>
+        --->
+
         <!------
             <div class="row testimonials" data-animate-block>
                 <div class="column lg-12">
@@ -745,22 +857,18 @@
         <div class="row section-header section-header--dark">
           <div class="column lg-12">
             <h3 style="color: lightgrey" class="text-pretitle">Contacto</h3>
-            <h1 class="text-display-title">
-              Te ayudamos a crear tu proyecto...
-            </h1>
+            <h1 class="text-display-title">Hora de crear.</h1>
           </div>
         </div>
 
         <div class="row row-x-center text-center s-contact__content">
           <div class="column lg-12">
             <p class="lead">
-              Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac
-              augue. Fusce vel dui. In ac felis quis tortor malesuada pretium.
-              Curabitur vestibulum aliquam leo. Quasi sed at voluptas corrupti
-              eius distinctio.
+              ¿Todo listo para dar el siguiente paso? Cuéntanos más sobre tu
+              proyecto y hagamos que suceda.
             </p>
             <div class="btn-wrap">
-              <a href="#0" class="btn"> Contacto </a>
+              <a href="#0" class="btn"> Envíanos un mensaje </a>
             </div>
           </div>
         </div>
