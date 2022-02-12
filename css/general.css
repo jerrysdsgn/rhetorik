@@ -1,0 +1,9 @@
+footer a:hover {
+  color: black !important;
+}
+
+@media screen and (max-width: 760px) {
+  .navbar a {
+    color: black !important;
+  }
+}

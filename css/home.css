@@ -1,0 +1,250 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.navbar-wrapper.navbar-faded {
+  background-color: black;
+}
+
+.navbar a {
+  color: white;
+}
+
+ul li {
+  list-style: none;
+}
+
+.navbar-wrapper .account-dropdown .dropdown-trigger .button img {
+  display: block;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  border-radius: 27%;
+}
+
+.spacer {
+  margin-bottom: 80px;
+}
+
+.kit-btn {
+  width: 100%;
+}
+
+.grid-product {
+  padding: 30px;
+}
+
+.grid-products .grid-products-inner .grid-product .grid-product-info h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: green;
+  font-weight: bold;
+}
+
+.grid-products .grid-products-inner .grid-product:hover .buttons .button {
+  background: red;
+  border-color: red;
+  color: #fff;
+  -webkit-box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
+    0 4px 23px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(140 140 249 / 20%) !important;
+  box-shadow: 0 14px 26px -12px rgb(140 140 249 / 42%),
+    0 4px 23px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(140 140 249 / 20%) !important;
+}
+
+.menu-ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.button.is-link {
+  background: #4a90e2 !important;
+  color: white;
+}
+
+.button.is-link:hover {
+  background: lightsalmon !important;
+  color: black;
+}
+
+.site-blue {
+  background: #4a90e2 !important;
+  color: white;
+  border: none;
+}
+
+.site-blue:hover {
+  background: #4a90e2 !important;
+  color: white;
+  border: none;
+}
+
+.popular-categories .box.is-category:hover {
+  background: transparent;
+  border: inherit;
+}
+
+.popular-categories .box.is-category:hover .left h3,
+.popular-categories .box.is-category:hover .left p {
+  color: #444f60 !important;
+  -webkit-box-shadow: -1px 3px 15px 0 rgb(0 0 0 / 6%);
+  box-shadow: -1px 3px 15px 0 rgb(0 0 0 / 6%);
+}
+
+.modal.is-active .modal-background {
+  background: linear-gradient(45deg, #6a85b6 0%, #4a90e2 100%);
+  background-color: #4a90e2;
+}
+
+.vertical-testimonials .vtestimonial-item .vt-content .vt-name {
+  color: black;
+}
+
+.flex-card.testimonial-card .testimonial-title,
+.network-grid .testimonial-card.network-card .testimonial-title,
+.testimonial-card.project-card .testimonial-title,
+.testimonial-card.profile-card .testimonial-title,
+.carousel-wrap
+  .testimonials-solo-carousel
+  .testimonial-card.testimonial-item
+  .testimonial-title {
+  color: black;
+}
+
+::selection {
+  background: #4a90e2; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #4a90e2; /* Gecko Browsers */
+}
+
+.wrapper {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #414a4c;
+  mix-blend-mode: overlay;
+}
+.video-text-header {
+  color: white;
+}
+
+.title {
+  font-family: "Bebas Neue", cursive;
+}
+
+.overtitle {
+  color: #8e9baf;
+}
+
+.subtitle {
+  font-family: "Lato", sans-serif;
+}
+
+.navbar-end a {
+  font-family: "Bebas Neue", sans-serif !important;
+  font-size: 1.2em;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+}
+
+.body-text {
+  font-family: "Lato", sans-serif;
+  color: #6a6f76;
+}
+
+.content {
+  font-family: "Lato", sans-serif;
+  font-size: 1.1em;
+  color: #6a6f76;
+}
+
+#priceK1 {
+  font-size: 19px;
+  color: #4a90e2;
+  font-weight: bold;
+}
+#priceK2 {
+  font-size: 19px;
+  color: #4a90e2;
+  font-weight: bold;
+}
+#priceK3 {
+  font-size: 19px;
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+.text-header-content {
+  width: 75%;
+}
+
+.button {
+  font-family: "Bebas Neue", cursive !important;
+  font-size: 1.2em;
+}
+
+.em5 {
+  font-size: 5.5em !important;
+}
+
+.em3 {
+  font-size: 3.5em !important;
+}
+
+.em2 {
+  font-size: 2.5em !important;
+}
+
+.em18 {
+  font-size: 1.8em !important;
+}
+
+.desktop-video {
+  display: block;
+}
+
+.mobile-video {
+  display: none;
+}
+
+.modal.is-active .modal-background {
+  background: linear-gradient(45deg, #000 0%, #000 100%);
+  background-color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-wrapper {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .desktop-video {
+    display: none;
+  }
+  .mobile-video {
+    display: block;
+  }
+}
