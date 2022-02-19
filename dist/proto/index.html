@@ -627,6 +627,7 @@
                 <div class="folio-item__cat">Categoria</div>
                 <h4 class="folio-item__title">Nombre</h4>
               </div>
+              <!----
               <a
                 href="#"
                 title="Project Link"
@@ -634,7 +635,7 @@
                 class="folio-item__project-link"
                 >Visitar proyecto</a
               >
-            </div>
+            --></div>
           </div>
           <!-- end column -->
           <div class="column">
@@ -657,6 +658,7 @@
                 <div class="folio-item__cat">Categoria</div>
                 <h4 class="folio-item__title">Nombre</h4>
               </div>
+              <!-----
               <a
                 href="#"
                 title="Project Link"
@@ -664,6 +666,7 @@
                 class="folio-item__project-link"
                 >Visitar proyecto</a
               >
+              --->
             </div>
           </div>
           <!-- end column -->
@@ -687,6 +690,7 @@
                 <div class="folio-item__cat">Categoria</div>
                 <h4 class="folio-item__title">Nombre</h4>
               </div>
+              <!----
               <a
                 href="#"
                 title="Project Link"
@@ -694,6 +698,7 @@
                 class="folio-item__project-link"
                 >Visitar proyecto</a
               >
+              --->
             </div>
           </div>
           <!-- end column -->
@@ -870,7 +875,12 @@
               proyecto y hagamos que suceda.
             </p>
             <div class="btn-wrap">
-              <a href="#0" class="btn"> Envíanos un mensaje </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=525564316448&text=%C2%A1Hola,!%20buen%20d%C3%ADa!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n."
+                class="btn"
+                ><ion-icon size="large" name="logo-whatsapp"></ion-icon
+                >&nbsp;&nbsp;Envíanos un mensaje
+              </a>
             </div>
           </div>
         </div>
@@ -923,7 +933,7 @@
 
           <div class="row s-footer__bottom">
             <div class="column ss-copyright">
-              <span>© Copyright Rhetorik</span>
+              <span>© <span id="theYear"></span> Copyright Rhetorik</span>
             </div>
           </div>
           <!-- end s-footer__top -->
@@ -1004,5 +1014,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+      var cd = new Date();
+      var thisYear = cd.getFullYear();
+      document.getElementById("theYear").innerHTML = thisYear;
+    </script>
   </body>
 </html>
