@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rhetorik</title>
+
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- favicons
+    ================================================== -->
+    <!----
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    ---->
+
+    <style>
+      .text-display-title-2 {
+        --text-display-title-size: 3.6rem;
+        --text-multiplier: 1;
+        font-family: var(--font-2);
+        font-size: calc(
+          var(--text-display-title-size) * var(--text-multiplier)
+        );
+        font-weight: 600;
+        line-height: 1.2857;
+        margin-top: 0;
+      }
+      .header-text {
+        font-family: var(--font-2);
+        font-size: var(--text-sm);
+        font-weight: 600;
+        color: var(--color-body);
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+      }
+      .video-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 0; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+      }
+      .video-title {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+      }
+
+      /* Then style the iframe to fit in the container div with full height and width */
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .folio-item:hover .folio-item__project-link {
+        color: white;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media screen and (min-width: 760px) {
+        .offset {
+          margin-left: 110px;
+        }
+      }
+    </style>
+  </head>
+
+  <body id="top">
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
+
+    <!-- page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
+      <!-- # site header 
+        ================================================== -->
+      <header class="s-header">
+        <div class="s-header__block">
+          <div class="s-header__logo">
+            <a class="logo" href="index.html">
+              <img src="../img/logo.png" alt="Homepage" />
+            </a>
+          </div>
+
+          <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+        </div>
+        <!-- end s-header__block -->
+
+        <div class="row s-header__nav-wrap">
+          <nav class="s-header__nav">
+            <ul>
+              <li class="current">
+                <a href="#intro" class="smoothscroll">Intro</a>
+              </li>
+              <li>
+                <a href="#services" class="smoothscroll">¿Qué hacemos?</a>
+              </li>
+              <!--<li><a href="#works" class="smoothscroll">Our Works</a></li>-->
+              <li><a href="#contact" class="smoothscroll">Contacto</a></li>
+            </ul>
+          </nav>
+
+          <ul class="s-header__social">
+            <li>
+              <a target="_blank" href="https://www.instagram.com/rhetorik.mx/">
+                <ion-icon
+                  size="large"
+                  class="services-icons"
+                  name="logo-instagram"
+                ></ion-icon>
+              </a>
+            </li>
+            <li></li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.youtube.com/channel/UCsXNq4OmEspKBS9Uh6c83WA"
+              >
+                <ion-icon
+                  size="large"
+                  class="services-icons"
+                  name="logo-youtube"
+                ></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end s-header__nav-wrap -->
+      </header>
+      <!-- end s-header -->
+
+      <div class="video-container">
+        <div class="overlay"></div>
+        <video muted loop autoplay src="./droneTrimmed.mp4"></video>
+        <!--<h1 class="video-title">Rhetorik digital media</h1>-->
+      </div>
+
+      <!-- # intro 
+        ================================================== -->
+      <section
+        style="padding-bottom: 0"
+        id="intro"
+        class="s-intro target-section"
+      >
+        <div class="row">
+          <div class="column">
+            <div class="s-intro__top-block">
+              <h1 class="s-intro__text">
+                Creamos contenido que<br />
+                te ayude a crecer y posicionarte <br />
+                en tu mercado objetivo<span>.</span>
+              </h1>
+
+              <a href="#services" class="s-intro__scroll-down smoothscroll">
+                <span>Descubre más</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="
+                    fill: rgba(0, 0, 0, 1);
+                    transform: rotate(180deg);
+                    -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+                  "
+                >
+                  <path
+                    d="M21 11L6.414 11 11.707 5.707 10.293 4.293 2.586 12 10.293 19.707 11.707 18.293 6.414 13 21 13z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-----
+
+            <div class="row about-stats stats block-lg-one-fourth block-md-one-half block-mob-whole" data-animate-block>
+                
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter=30><span>30</span>+</div>
+                    <h5>Happy Customers</h5>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing 
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                    magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter=35><span>35</span>+</div>
+                    <h5>Hours Work</h5>
+                    <p>
+                    Eleifend donec pretium vulputate sapien nec sagittis 
+                    aliquam malesuada. Eu scelerisque felis imperdiet proin 
+                    fermentum leo. Cursus turpis massa tincidunt.
+                    </p>
+                </div>
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter=41><span>41</span>+</div>
+                    <h5>Coffee Drinks</h5>
+                    <p>
+                    Volutpat commodo sed egestas egestas fringilla phasellus 
+                    faucibus scelerisque. Est velit egestas dui id ornare. 
+                    Leo urna molestie at elementum.
+                    </p>
+                </div>
+                <div class="column stats__item" data-animate-el>
+                    <div class="stats__count" data-counter=38><span>38</span>+</div>
+                    <h5>Completed Projects</h5> 
+                    <p>
+                    Nulla pharetra diam sit amet nisl suscipit adipiscing 
+                    bibendum est. Quis risus sed vulputate odio ut. 
+                    Lectus arcu bibendum at varius vel eu facilisis.
+                    </p>
+                </div>
+    
+            </div> 
+
+            ---->
+      </section>
+      <!-- end s-intro -->
+
+      <!-- # services
+        ================================================== -->
+      <section id="services" class="s-works target-section">
+        <div class="row section-header has-bottom-sep">
+          <div class="column lg-12">
+            <h3 style="color: lightgrey" class="text-pretitle">
+              ¿Qué hacemos?
+            </h3>
+            <h1 class="text-display-title">
+              Soluciones integrales de marketing
+            </h1>
+          </div>
+        </div>
+        <!-- end section-header -->
+
+        <div
+          class="row services-list block-lg-one-third block-tab-whole"
+          data-animate-block
+        >
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/edicion_audiovisual.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <a class="smoothscroll" href="#videoMarketing"
+                ><h3 class="h4">Video Marketing</h3></a
+              >
+              <p>
+                Creamos videos promocionales que te ayuden a vender tu producto.
+              </p>
+            </div>
+          </div>
+
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/foto_video.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <a class="smoothscroll" href="#photoShoots"
+                ><h3 class="h4">Photo sessions</h3></a
+              >
+              <p>Fotografía de producto y sesiones de foto profesionales.</p>
+            </div>
+          </div>
+
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/web.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <a class="smoothscroll" href="#webDev"
+                ><h3 class="h4">Desarrollo Web</h3></a
+              >
+              <p>
+                Sitios web hechos a la medida de tus necesidades de negocio.
+              </p>
+            </div>
+          </div>
+
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/redes.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <a class="smoothscroll" href="#rProgram"
+                ><h3 class="h4">Rhetorik program</h3></a
+              >
+              <p>
+                Te ayudamos a que lo último en lo que te preocupes sea lo que
+                vas a subir a redes sociales.
+              </p>
+            </div>
+          </div>
+
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/renta_de_estudio.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <h3 class="h4">Renta de estudio</h3>
+              <p>
+                Contamos con un espacio acondicionado para la creación de
+                contenido, disponible para que lo ocupes cuando necesites.
+              </p>
+            </div>
+          </div>
+
+          <div class="column service-item" data-animate-el>
+            <div class="service-icon-block">
+              <span class="service-icon">
+                <img src="../img/branding.svg" alt="" />
+              </span>
+            </div>
+            <div class="service-text">
+              <h3 class="h4">Branding</h3>
+              <p>(Próximamente)</p>
+            </div>
+          </div>
+        </div>
+        <!-- end services-list -->
+      </section>
+      <!-- end s-services -->
+
+      <!-- ## Video 2 cols
+        ================================================== -->
+      <section id="rVM" class="s-works target-section" style="background: black;">
+        <div
+          class="row folio-list block-lg-one-half block-tab-one-half block-stack-on-550 collapse"
+          data-animate-block
+        >
+          <div class="column">
+            <h3 class="header-text" style="color: lightgrey">
+              VIDEO
+            </h3>
+            <h1 style="width: 80%" class="text-display-title-2">
+              El método de conversión más efectivo del momento
+            </h1>
+            <p style="width: 80%">
+              <ul>
+                <li>Sistemas Cardboard o VR.</li>
+                <li>Video promocional.</li>
+                <li>Tomas aéreas profesionales</li>
+                <li>Cortometraje musical, corporativo, o vlog</li>
+              </ul>
+            </p>
+          </div>
+          <!-- end column -->
+          <div style="text-align: center" class="column">
+            <br />
+            <br />
+            <video muted autoplay loop src="./GAVDetailing.mp4"></video>
+          </div>
+          <!-- end column -->
+        </div>
+        <!-- folio-list -->
+      </section>
+      <!-- end s-works -->
+   
+      <!-- ## Program
+        ================================================== -->
+        <section id="rProgram" class="s-works target-section">
+          <div
+            class="row folio-list block-lg-one-half block-tab-one-half block-stack-on-550 collapse"
+            data-animate-block
+          >
+              <!-- end column -->
+              <div style="text-align: center" class="column">
+                <img
+                  style="height: 100%"
+                  src="./images/rProgram.png"
+                  srcset="./images/rProgram.png 1x, ./images/rProgram.png 2x"
+                  alt=""
+                />
+              </div>
+              <!-- end column -->
+            <div class="column">
+              <h3 class="header-text" style="color: lightgrey; margin-left: 5%;">
+                RHETORIK PROGRAM
+              </h3>
+              <h1 style="width: 95%; margin-left: 5%;" class="text-display-title-2">
+                Creación de contenido para Redes Sociales
+              </h1>
+              <p style="width: 95%; margin-left: 5%;">
+                Despreocupate de tener que pensar en qué vas a publicar en redes
+                sociales. Nos encargamos de generar el contenido que estará
+                alimentando a tus cuentas durante semanas. Manten a tu mercado
+                actualizado sobre tus productos y/o promociones.
+              </p>
+            </div>
+          </div>
+          <!-- folio-list -->
+        </section>
+        <!-- end s-works -->
+
+      <!-- ## Photo Works
+        ================================================== -->
+      <section id="videoMarketing" class="s-works target-section">
+
+        <div
+          id="photoShoots"
+          class="row section-header section-header--dark has-bottom-sep"
+        >
+          <div class="column lg-12">
+            <h3 style="color: lightgrey" class="text-pretitle">Photoshoots</h3>
+            <h1 class="text-display-title-2">
+              Somos expertos en hacer brillar a tus productos.
+            </h1>
+            <div style="text-align: left" class="row">
+              <div class="column">
+                <ul>
+                  <li>Producto</li>
+                  <li>Diseño Publicitario</li>
+                  <li>Sistemas Cardboard y POV</li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul>
+                  <li>Modelaje</li>
+                  <li>Fotografía por drone</li>
+                  <li>Fotografía con fondo digital</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end section-header -->
+
+        <div
+          class="row folio-list block-lg-one-third block-tab-one-half block-stack-on-550 collapse"
+          data-animate-block
+        >
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="galeria.html"
+                  title="Name"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_00a4a636cafa4f7da26ec28bd74f95d9~mv2_d_5184_2916_s_4_2.jpg/v1/fill/w_903,h_508,al_c,q_85,usm_0.66_1.00_0.01/Porsche%20Parade%20M%C3%A9xico%202018.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Ir a galería</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 18 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="galeria.html"
+                  title="Name"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp"
+                    srcset="
+                      https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp 1x,
+                      https://static.wixstatic.com/media/d27e02_3333529bfc3e47a9a68ff4cb23c1dab4~mv2_d_4807_2708_s_4_2.jpg/v1/fill/w_902,h_508,al_c,q_85,usm_0.66_1.00_0.01/Festival%20Porsche%20Parade%20M%C3%A9xico%202018.webp 2x
+                    "
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Ir a galería</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 19 -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <a
+                  class="folio-item__thumb-link"
+                  href="galeria.html"
+                  title="Name"
+                  data-size="1050x700"
+                >
+                <img
+                src="https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp"
+                srcset="
+                  https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp 1x,
+                  https://static.wixstatic.com/media/d27e02_23c67fd3b696439f820aa6c8000a6cc9~mv2.jpg/v1/fill/w_992,h_545,al_c,q_85,usm_0.66_1.00_0.01/DSC04180R.webp 2x
+                "
+                alt=""
+              />
+                </a>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoría</div>
+                <h4 class="folio-item__title">Ir a galería</h4>
+              </div>
+              <div class="folio-item__caption">
+                <p>
+                  Vero molestiae sed aut natus excepturi. Et tempora numquam.
+                  Temporibus iusto quo.Unde dolorem corrupti neque nisi.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end column 20 -->
+
+          <br />
+
+          <div
+            style="width: 100%"
+            class="row row-x-center text-center s-contact__content"
+          >
+            <div class="column lg-12">
+              <div style="background-color: inherit" class="btn-wrap">
+                <a href="galeria.html" class="btn"> Visitar galería </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- folio-list -->
+      </section>
+      <!-- end s-works -->
+
+      <!-- ## Web Dev
+        ================================================== -->
+      <section id="webDev" class="s-works target-section">
+        <div class="row section-header section-header--dark has-bottom-sep">
+          <div class="column lg-12">
+            <h3 style="color: lightgrey" class="text-pretitle">
+              Desarrollo Web
+            </h3>
+            <h1 class="text-display-title-2">
+              En internet, el mayor diferenciador de tu negocio es un excelente
+              sitio web.
+            </h1>
+            <p>Generamos un sitio web que ayude a creceer a tu negocio.</p>
+          </div>
+        </div>
+        <!-- end section-header -->
+
+        <div
+          class="row folio-list block-lg-one-third block-tab-one-half block-stack-on-550 collapse"
+          data-animate-block
+        >
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <span
+                  class="folio-item__thumb-link"
+                  href="../img/webDev1.png"
+                  title="Web Dev 1"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="../img/webDev1.png"
+                    srcset="../img/webDev1.png, ../img/webDev1.png 1x"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoria</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <!----
+              <a
+                href="#"
+                title="Project Link"
+                style="background: black"
+                class="folio-item__project-link"
+                >Visitar proyecto</a
+              >
+            --></div>
+          </div>
+          <!-- end column -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <span
+                  class="folio-item__thumb-link"
+                  href="../img/webDev2.png"
+                  title="Web Dev 2"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="../img/webDev2.png"
+                    srcset="../img/webDev2.png, ../img/webDev2.png 1x"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoria</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <!-----
+              <a
+                href="#"
+                title="Project Link"
+                style="background: black"
+                class="folio-item__project-link"
+                >Visitar proyecto</a
+              >
+              --->
+            </div>
+          </div>
+          <!-- end column -->
+          <div class="column">
+            <div class="folio-item" data-animate-el>
+              <div class="folio-item__thumb">
+                <span
+                  class="folio-item__thumb-link"
+                  href="../img/webDev3.png"
+                  title="Web Dev 3"
+                  data-size="1050x700"
+                >
+                  <img
+                    src="../img/webDev3.png"
+                    srcset="../img/webDev3.png, ../img/webDev3.png 1x"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <div class="folio-item__info">
+                <div class="folio-item__cat">Categoria</div>
+                <h4 class="folio-item__title">Nombre</h4>
+              </div>
+              <!----
+              <a
+                href="#"
+                title="Project Link"
+                style="background: black"
+                class="folio-item__project-link"
+                >Visitar proyecto</a
+              >
+              --->
+            </div>
+          </div>
+          <!-- end column -->
+        </div>
+        <!-- folio-list -->
+
+        <!-- ## Renta de estudio
+        ================================================== -->
+        <section id="rRenta" class="s-works target-section">
+          <div
+            class="row folio-list block-lg-one-half block-tab-one-half block-stack-on-550 collapse"
+            data-animate-block
+          >
+            <!-- end column -->
+            <div class="column">
+              <img
+                src="images/renta.png"
+                srcset="images/renta.png 1x, images/renta.png 2x"
+                alt=""
+              />
+            </div>
+            <div class="column">
+              <div class="offset">
+                <h3 class="header-text" style="color: lightgrey; margin-top: 0">
+                  RENTA DE ESTUDIO
+                </h3>
+                <h1 class="text-display-title-2">
+                  Propuesta de valor de rhetorik program.
+                </h1>
+                <p>
+                  Contamos con un espacio que te permite generar contenido de
+                  calidad profesional. [lista de lo que contiene el espacio].
+                </p>
+              </div>
+            </div>
+            <!-- end column -->
+          </div>
+          <!-- folio-list -->
+        </section>
+        <!-- end s-works -->
+
+        <!-- ## Branding
+        ================================================== -->
+        <!----
+        <section id="rBranding" class="s-works target-section">
+          <div
+            class="row folio-list block-lg-one-half block-tab-one-half block-stack-on-550 collapse"
+            data-animate-block
+          >
+            <div class="column">
+              <h3 class="header-text" style="color: lightgrey">BRANDING</h3>
+              <h1 class="text-display-title-2">
+                Propuesta de valor de rhetorik program.
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio
+                modi ducimus, praesentium blanditiis nesciunt aliquid atque
+                architecto repudiandae dignissimos voluptate et beatae deleniti
+                perspiciatis qui molestias vitae ipsum est iusto!
+              </p>
+            </div>
+
+            <div class="column">
+              <img
+                src="images/portfolio/minimalismo.jpg"
+                srcset="
+                  images/portfolio/minimalismo.jpg    1x,
+                  images/portfolio/minimalismo@2x.jpg 2x
+                "
+                alt=""
+              />
+            </div>
+
+          </div>
+
+        </section>
+        --->
+
+        <!------
+            <div class="row testimonials" data-animate-block>
+                <div class="column lg-12">
+    
+                    <div class="swiper-container testimonial-slider" data-animate-el>
+    
+                        <div class="swiper-wrapper">
+
+                            <div class="testimonial-slider__slide swiper-slide">
+                                <div class="testimonial-slider__author">
+                                    <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                    <cite class="testimonial-slider__cite">
+                                        <strong>Tim Cook</strong>
+                                        <span>CEO, Apple</span>
+                                    </cite>
+                                </div>
+                                <p>
+                                Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
+                                Explicabo a quaerat sint autem dolore ducimus ut consequatur neque. Nisi dolores quaerat fuga rem nihil nostrum.
+                                Laudantium quia consequatur molestias.
+                                </p>
+                            </div> 
+            
+                            <div class="testimonial-slider__slide swiper-slide">
+                                <div class="testimonial-slider__author">
+                                    <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                    <cite class="testimonial-slider__cite">
+                                        <strong>Sundar Pichai</strong>
+                                        <span>CEO, Google</span>
+                                    </cite>
+                                </div>
+                                <p>
+                                Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
+                                Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
+                                Quasi voluptas eius distinctio. Atque eos maxime.
+                                </p>
+                            </div> 
+            
+                            <div class="testimonial-slider__slide swiper-slide">
+                                <div class="testimonial-slider__author">
+                                    <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                    <cite class="testimonial-slider__cite">
+                                        <strong>Satya Nadella</strong>
+                                        <span>CEO, Microsoft</span>
+                                    </cite>
+                                </div>
+                                <p>
+                                Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
+                                Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
+                                Voluptatem dignissimos ut.
+                                </p>
+                            </div> 
+    
+                            <div class="testimonial-slider__slide swiper-slide">
+                                <div class="testimonial-slider__author">
+                                    <img src="images/avatars/user-06.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                    <cite class="testimonial-slider__cite">
+                                        <strong>Jeff Bezos</strong>
+                                        <span>CEO, Amazon</span>
+                                    </cite>
+                                </div>
+                                <p>
+                                Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
+                                quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. 
+                                Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                                </p>
+                            </div> 
+        
+                        </div> 
+    
+                        <div class="swiper-pagination"></div>
+    
+                    </div> 
+    
+                </div> 
+            </div> 
+            ---->
+        <!-- end row testimonials -->
+      </section>
+      <!-- end s-works -->
+
+      <!-- ## contact
+        ================================================== -->
+      <section id="contact" class="s-contact target-section">
+        <div class="row section-header section-header--dark">
+          <div class="column lg-12">
+            <h3 style="color: lightgrey" class="text-pretitle">Contacto</h3>
+            <h1 class="text-display-title">Hora de crear.</h1>
+          </div>
+        </div>
+
+        <div class="row row-x-center text-center s-contact__content">
+          <div class="column lg-12">
+            <p class="lead">
+              ¿Todo listo para dar el siguiente paso? Cuéntanos más sobre tu
+              proyecto y hagamos que suceda.
+            </p>
+            <div class="btn-wrap">
+              <a
+                href="https://api.whatsapp.com/send?phone=525564316448&text=%C2%A1Hola,!%20buen%20d%C3%ADa!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n."
+                class="btn"
+                ><ion-icon size="large" name="logo-whatsapp"></ion-icon
+                >&nbsp;&nbsp;Envíanos un mensaje
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="s-footer">
+          <div class="row s-footer__top">
+            <div
+              class="column lg-5 md-8 stack-on-700 s-footer__block contact-address"
+            >
+              <h4 class="h6">Rhetorik Digital Media</h4>
+
+              <p style="font-size: 0.75em">
+                En Rhetorik nos dedicamos a crear contenido digital que cautive
+                a la comunidad de tu negocio. ¡Acércate a nosotros!
+              </p>
+            </div>
+
+            <div
+              class="column lg-3 md-4 stack-on-700 s-footer__block contact-social"
+            >
+              <h4 class="h6">Síguenos</h4>
+
+              <ul class="contact-list">
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/rhetorik.mx/"
+                    >Instagram</a
+                  >
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCsXNq4OmEspKBS9Uh6c83WA/videos"
+                    >Youtube</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="column lg-3 md-12 s-footer__block contact-number">
+              <h4 class="h6">Contacto</h4>
+
+              <ul class="contact-list">
+                <li><a href="#">55 5555 5555</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- end s-footer__top -->
+
+          <div class="row s-footer__bottom">
+            <div class="column ss-copyright">
+              <span>© <span id="theYear"></span> Copyright Rhetorik</span>
+            </div>
+          </div>
+          <!-- end s-footer__top -->
+        </footer>
+      </section>
+      <!-- end s-contact -->
+    </div>
+    <!-- end -s-pagewrap -->
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button
+              class="pswp__button pswp__button--close"
+              title="Close (Esc)"
+            ></button>
+            <button
+              class="pswp__button pswp__button--share"
+              title="Share"
+            ></button>
+            <button
+              class="pswp__button pswp__button--fs"
+              title="Toggle fullscreen"
+            ></button>
+            <button
+              class="pswp__button pswp__button--zoom"
+              title="Zoom in/out"
+            ></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button
+            class="pswp__button pswp__button--arrow--left"
+            title="Previous (arrow left)"
+          ></button>
+          <button
+            class="pswp__button pswp__button--arrow--right"
+            title="Next (arrow right)"
+          ></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end photoSwipe background -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      var cd = new Date();
+      var thisYear = cd.getFullYear();
+      document.getElementById("theYear").innerHTML = thisYear;
+    </script>
+  </body>
+</html>
