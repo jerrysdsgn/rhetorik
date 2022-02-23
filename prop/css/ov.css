@@ -1,0 +1,5 @@
+@media scrren and (max-width: 760px) {
+  .video-container video {
+    display: none !important;
+  }
+}
